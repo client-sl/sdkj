@@ -1,0 +1,2332 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta http-equiv="x-ua-compatible" content="IE=edge" >
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/frame.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery.autocompleter.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	 <script>
+
+	     function f_setmess(read,write)
+	     {
+	         $('#read1').html(read);
+	         $('#write1').html(write);
+	         //  alert("111"); 
+	     }
+
+	     function f_hidenew()
+	     {
+	         $('.box').hide();
+	     }
+
+	     function f_shownew( title,mess)
+	     {          
+	             $('#boxtitle').html(title);
+	             $('#news').html(mess);
+	             $('.box').show();	
+	     }
+
+
+	     function sleep(numberMillis) {
+	         var now = new Date();
+	         var exitTime = now.getTime() + numberMillis;
+	         while (true) {
+	             now = new Date();
+	             if (now.getTime() > exitTime)
+	                 return;
+	         }
+	     }
+
+
+
+	 </script>
+</head>
+<body>
+<body>
+
+<div class="box"  style="display: none; position: absolute;bottom: 0;right: 0;">
+	<div class="box-title">
+		<p class="title" id="boxtitle">温馨提示</p>
+		<span class="close">X</span>
+	</div>
+	<div class="box-con" id="news" >
+		<p>2014年10月8日，党的群众路线教育实践活动总结大会召开，习近平总书记对加强党的作风建设、全面推进从严治党作出重要部署。一直以来，习近平总书记对全面从严治党有自己的深刻理解，但又善于运用比喻来说明，一起来学习</p>
+	</div>
+</div>
+<div id="containment-wrapper" style="display: none;">
+  <div id="draggable4" class="draggable ui-widget-content">
+		<div class="myDesk-title">	
+			<p class="title" id="boxtitle">我的桌面</p>
+			<span class="close" id="close" onclick='' style="color: #fff;">X</span>	
+		</div>
+		<ul class="myDesk-con">
+			<li><a href="javascript:;">购销返利计算</a></li>
+			<li><a href="javascript:;">代销帐款</a></li>
+			<li><a href="javascript:;">联营帐款</a></li>
+			<li><a href="javascript:;">扣率代销帐款</a></li>
+			<li><a href="javascript:;">租赁账帐款</a></li>
+			<li><a href="javascript:;">费用单</a></li>
+			<li><a href="javascript:;">扣补单</a></li>
+			<li><a href="javascript:;">供应商对帐单</a></li>
+			<li><a href="javascript:;">供应商付款单</a></li>
+			<li><a href="javascript:;">供应商预付款单</a></li>
+			<li><a href="javascript:;">供应商批量结算</a></li>
+			<li><a href="javascript:;">供应商批量对账</a></li>
+			<li><a href="javascript:;">历史供应商对帐单查看</a></li>
+			<li><a href="javascript:;">历史供应商付款单查看</a></li>
+			<li><a href="javascript:;">账期查询</a></li>
+			<li><a href="javascript:;">扣补向导</a></li>
+			<li><a href="javascript:;">采购商品汇总报表</a></li>
+			<li><a href="javascript:;">采购大类汇总报表</a></li>
+			<li><a href="javascript:;">采购类别汇总报表</a></li>
+			<li><a href="javascript:;">采购供应商汇总报表</a></li>
+			<li><a href="javascript:;">历史进价查询</a></li>
+			<li><a href="javascript:;">供应商到期账款报表</a></li>
+			<li><a href="javascript:;">应付账款汇总报表</a></li>
+			<li><a href="javascript:;">应付账款明细报表</a></li>
+			<li><a href="javascript:;">供应商历史往来账款汇总报表</a></li>
+			<li><a href="javascript:;">实付账款明细报表</a></li>
+			<li><a href="javascript:;">供应商对账单明细报表</a></li>
+			<li><a href="javascript:;">供应商对帐情况报表</a></li>					
+		</ul>		
+  </div>
+</div>
+
+<div class="wrap">
+	<div class="logo">
+		<img src="images/logo.png">
+	</div>
+	<div class="tab-l">
+		<div class="tab-heading">
+			<p>我的工作台</p>
+			<a href="javascript:;"  id="mail">已读:&nbsp;<span  id="read1">8</span>&nbsp;条,未读:&nbsp;<span id="write1">7</span>&nbsp;条</a>
+		</div>
+		<ul class="tab-btn">	
+			<li class="active"><span class="yyb"></span><p>营运子系统</p></li>
+			<li><span class="gyb"></span><p>供应链系统</p></li>	
+			<li><span class="apb"></span><p>爱拼够系统</p></li>	
+			<li><span class="icb"></span><p>决策子系统</p></li>
+			<li><span class="cwb"></span><p>财务子系统</p></li>		
+		</ul>
+	</div>
+	<div class="line">
+		<div class="top"></div>
+		<div class="center"></div>
+		<div class="bottom"></div>		
+	</div>
+	<div class="tab-r">
+		<div class="btn">			
+			<div class="fast" style="border-radius: 5px; margin-left: 5px; width: 100px;" onclick="">快速桌面</div>
+			<div id="myset"><span class="sz"></span><p>我的设置</p></div>
+			<div id="linkme"><span class="lx"></span><p>联系我们</p></div>
+			<div id="onhelp"><span class="zx"></span><p>在线帮助</p></div>
+			<form style="float: right; margin-right: 0; position: relative;">				
+				<input type="text" name="nope" id="nope" value="搜索亚讯"/ >
+				<input class="submit" type="submit" name="" value="" id="search">
+			</form>
+		</div>
+		<div class="tab-bottom">
+			<div class="tab-item" style="display: block;">
+				<!-- 档案 -->
+				<div class="tab-list" style="display: block;">
+					<!-- 往来单位 -->
+					<div class="tab-h">
+						<span>往来<br>单位</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1101">供应商档案</a></li>
+								<li><a href="javascript:;"  id="1102">客户类别</a></li>
+								<li><a href="javascript:;"  id="1103">客户区域</a></li>
+								<li><a href="javascript:;"  id="1104">客户档案</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 商品信息 -->
+					<div class="tab-h">
+						<span>商品<br>信息</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1201">商品品类</a></li>
+								<li><a href="javascript:;"  id="1202">商品档案</a></li>
+								<li><a href="javascript:;"  id="1203">组合商品</a></li>
+								<li><a href="javascript:;"  id="1205">分店SKU管理</a></li>
+								<li><a href="javascript:;"  id="1206">分店商品配置</a></li>
+								<li><a href="javascript:;"  id="1207">新品申请</a></li>
+								<li><a href="javascript:;"  id="1208">新品审核</a></li>
+								<li><a href="javascript:;"  id="1209">新品试销分析报表</a></li>
+								<li><a href="javascript:;"  id="1210">商品综合查询</a></li>
+								<li><a href="javascript:;"  id="1211">商品异常查询</a></li>
+								<li><a href="javascript:;"  id="1212">条码黑名单</a></li>
+								<li><a href="javascript:;"  id="1213">商品属性检查</a></li>
+								<li><a href="javascript:;"  id="1214">组合商品查询</a></li>
+								<li><a href="javascript:;"  id="1215">商品课组</a></li>
+
+								<li><a href="javascript:;"  id="1241">商品设置</a></li>
+								<li><a href="javascript:;"  id="1242">批量修改商品属性</a></li>
+								<li><a href="javascript:;"  id="1243">基础代码</a></li>
+								<li><a href="javascript:;"  id="1244">助记码更新</a></li>
+                              
+								<li><a href="javascript:;"  id="1246">导出商品</a></li>
+								<li><a href="javascript:;"  id="1247">普通价签</a></li>
+								<li><a href="javascript:;"  id="1248">条码价签</a></li>
+								<li><a href="javascript:;"  id="1249">调价历史查询</a></li>
+
+								<li><a href="javascript:;"  id="1281">商品条码</a></li>
+								<li><a href="javascript:;"  id="1282">改包销售</a></li>
+								<li><a href="javascript:;"  id="1283">礼篮</a></li>
+								<li><a href="javascript:;"  id="1284">加工品</a></li>
+								<li><a href="javascript:;"  id="1285">一码多品</a></li>
+							</ul>
+						</div>		
+					</div>
+					<!-- 分店机构 -->
+					<div class="tab-h">
+						<span>分店<br>机构</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1301">分店仓库</a></li>
+								<li><a href="javascript:;"  id="1302">货架货位</a></li>
+								<li><a href="javascript:;"  id="1303">商品陈列与存量指标</a></li>
+							</ul>							
+						</div>
+					</div>
+					<!-- 生命周期 -->
+					<div class="tab-h">
+						<span>生命<br>周期</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1401">商品生命周期</a></li>
+								<li><a href="javascript:;"  id="1402">供应商生命周期</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 档案辅助 -->
+					<div class="tab-h">
+						<span>档案<br>辅助</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1501">商品设置</a></li>
+								<li><a href="javascript:;"  id="1502">商品转供应商</a></li>
+								<li><a href="javascript:;"  id="1503">供应商转经营方式</a></li>
+								<li><a href="javascript:;"  id="1504">批量修改商品属性</a></li>
+								<li><a href="javascript:;"  id="1506">基础代码</a></li>
+								<li><a href="javascript:;"  id="1507">助记码更新</a></li>
+								<li><a href="javascript:;"  id="1508">导出盘点商品</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<!-- 档案说明 -->
+					<div class="tab-h">
+						<span>档案<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="1601">商品条码</a></li>
+								<li><a href="javascript:;"  id="1602">改包销售</a></li>
+								<li><a href="javascript:;"  id="1603">礼篮</a></li>
+								<li><a href="javascript:;"  id="1604">加工品</a></li>
+								<li><a href="javascript:;"  id="1605">一码多品</a></li>
+							</ul>						
+						</div>
+					</div>
+				</div>
+				<!-- 价格 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>调基<br>本价</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="4101">调价单</a></li>
+								<li><a href="javascript:;"  id="4102">批发价调价单</a></li>
+								<li><a href="javascript:;"  id="4103">批量调价</a></li>
+								<li><a href="javascript:;"  id="4104">调价生效提醒</a></li>
+								<li><a href="javascript:;"  id="4105">调价历史查询</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>常用<br>促销</span>
+						<div class="shelf-info">
+							<ul>
+		                        <li><a href="javascript:;"  id="4208">促销计划</a></li>
+								<li><a href="javascript:;"  id="4201">促销进价单</a></li>
+								<li><a href="javascript:;"  id="4202">促销特价单</a></li>
+								<li><a href="javascript:;"  id="4203">超量特价单</<li>
+								<li><a href="javascript:;"  id="4204">类别品牌促销单</a></li>
+								<li><a href="javascript:;"  id="4205">超额奖励</a></li>
+								<li><a href="javascript:;"  id="4206">时段特价单</a></li>
+								<li><a href="javascript:;"  id="4209">促销进价向导</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>特色<br>促销</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="4301">DM促销单</a></li>
+								<li><a href="javascript:;"  id="4302">赠品促销</a></li>
+								<li><a href="javascript:;"  id="4303">优惠券促销单</a></li>
+								<li><a href="javascript:;"  id="4304">条件组合促销单</a></li>
+								<li><a href="javascript:;"  id="4306">量贩价促销单</a></li>
+								<li><a href="javascript:;"  id="4307">类别梯度折扣促销单</a></li>
+								<li><a href="javascript:;"  id="4308">促销终止</a></li>
+								<li><a href="javascript:;"  id="4309">偶数特价单</a></li>
+								<li><a href="javascript:;"  id="4310">买满折扣</a></li>
+								<li><a href="javascript:;"  id="4311">买满赠电子券</a></li>
+								<li><a href="javascript:;"  id="4312">付款方式促销</a></li>
+								<li><a href="javascript:;"  id="4313">买满直减（单据）</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>促销<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="4401">当前促销查询</a></li>
+								<li><a href="javascript:;"  id="4402">历史促销查询</a></li>
+								<li><a href="javascript:;"  id="4403">促销业绩查询</a></li>
+								<li><a href="javascript:;"  id="4404">促销销售查询</<li>
+								<li><a href="javascript:;"  id="4405">优惠券销售查询</a></li>
+								<li><a href="javascript:;"  id="4406">DM促销跟踪报表</a></li>
+								<li><a href="javascript:;"  id="4407">促销档期销售查询</a></li>
+								<li><a href="javascript:;"  id="4408">DM销售对比查询</a></li>
+								<li><a href="javascript:;"  id="4409">DM销售日比</a></li>
+								<li><a href="javascript:;"  id="4410">计划促销业绩查询</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>让利<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="4501">销售让利汇总</a></li>
+								<li><a href="javascript:;"  id="4502">销售让利明细</a></li>
+								<li><a href="javascript:;"  id="4503">销售员让利</a></li>
+								<li><a href="javascript:;"  id="4504">销售员让利明细</a></li>
+								<li><a href="javascript:;"  id="4505">促销让利汇总</a></li>
+								<li><a href="javascript:;"  id="4506">让利类别汇总</a></li>
+								<li><a href="javascript:;"  id="4507">让利大类汇总</a></li>
+								<li><a href="javascript:;"  id="4541">当前促销查询</a></li>
+								<li><a href="javascript:;"  id="4542">历史促销查询</a></li>
+								<li><a href="javascript:;"  id="4543">促销业绩查询</a></li>
+								<li><a href="javascript:;"  id="4544">促销销售查询</a></li>
+								<li><a href="javascript:;"  id="4545">优惠券销售查询</a></li>
+								<li><a href="javascript:;"  id="4546">DM促销跟踪报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>价格<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="4601">促销扣率</a></li>
+								<li><a href="javascript:;" id="4602">进货搭赠</a></li>
+								<li><a href="javascript:;" id="4603">自然组合促销</a></li>
+								<li><a href="javascript:;" id="4604">捆绑促销</<li>
+								<li><a href="javascript:;" id="4605">条件组合促销</a></li>
+								<li><a href="javascript:;" id="4606">买满赠电子券说明</a></li>
+								<li><a href="javascript:;" id="4607">付款方式促销说明</a></li>
+							</ul>						
+						</div>		
+					</div>
+				</div>
+				<!-- 卖场 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>营运<br>设置</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5101">POS设置</a></li>
+								<li><a href="javascript:;" id="5102">POS功能预设</a></li>
+								<li><a href="javascript:;" id="5103">POS登记</a></li>
+								<li><a href="javascript:;" id="5104">缴款设置</a></li>
+								<li><a href="javascript:;" id="5105">柜台营业员</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>收银<br>缴款</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5201">收银对账</a></li>
+								<li><a href="javascript:;" id="5202">缴款单</a></li>
+								<li><a href="javascript:;" id="5203">长短款报表</a></li>
+								<li><a href="javascript:;" id="5204">长短款报表（班次）</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>营运<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5301">日结</a></li>
+								<li><a href="javascript:;" id="5302">时段销售分析</a></li>
+								<li><a href="javascript:;" id="5303">客单分析</a></li>
+								<li><a href="javascript:;" id="5304">卖场监控</a></li>
+								<li><a href="javascript:;" id="5305">店长日志</a></li>
+								<li><a href="javascript:;" id="5306">班次查询</a></li>
+								<li><a href="javascript:;" id="5307">成本重结转</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>销售<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5401">流水查询</a></li>
+								<li><a href="javascript:;" id="5402">商品销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5403">大类销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5404">类别销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5405">门店销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5406">供应商销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5407">品牌销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5408">库位销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5409">商品销售分部汇总报表</a></li>
+								<li><a href="javascript:;" id="5410">类别销售分部汇总报表</a></li>
+
+								<li><a href="javascript:;" id="5411">日均销售报表</a></li>
+								<li><a href="javascript:;" id="5412">商品销售明细报表</a></li>
+								<li><a href="javascript:;" id="5413">中类销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5414">商品销售汇总报表（按商品和售价分组）</a></li>
+								<li><a href="javascript:;" id="5415">商品销售日报表</a></li>
+								<li><a href="javascript:;" id="5416">类别销售日报表</a></li>
+								<li><a href="javascript:;" id="5417">大类销售日报表</a></li>
+								<li><a href="javascript:;" id="5418">品牌销售日报表</a></li>
+								<li><a href="javascript:;" id="5419">门店销售日报表</a></li>
+								<li><a href="javascript:;" id="5420">供应商销售日报表</a></li>
+
+								<li><a href="javascript:;" id="5421">营业员销售提成</a></li>
+								<li><a href="javascript:;" id="5422">柜台销售查询</a></li>
+								<li><a href="javascript:;" id="5423">品牌销售分店汇总表</a></li>
+								<li><a href="javascript:;" id="5424">供应商付款方式汇总</a></li>
+								<li><a href="javascript:;" id="5425">收银员业绩考核报表</a></li>
+								<li><a href="javascript:;" id="5426">门店销售坪效分析</a></li>
+								<li><a href="javascript:;" id="5427">商品库位销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5431">机构供应商销售汇总报表</a></li>
+								<li><a href="javascript:;" id="5432">分店大类销售日报表</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>毛利<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5501">商品毛利日报表</a></li>
+								<li><a href="javascript:;" id="5502">类别毛利日报表</a></li>
+								<li><a href="javascript:;" id="5503">大类毛利日报表</a></li>
+								<li><a href="javascript:;" id="5504">品牌毛利日报表</a></li>
+								<li><a href="javascript:;" id="5505">门店毛利日报表</a></li>
+								<li><a href="javascript:;" id="5506">供应商毛利日报表</a></li>
+								<li><a href="javascript:;" id="5507">商品毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5508">类别毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5509">大类毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5510">品牌毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5511">门店毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5512">供应商毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5513">供应商类别毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5514">商品毛利汇总报表（按仓库）</a></li>
+								<li><a href="javascript:;" id="5515">毛利分析（按税率）</a></li>
+								<li><a href="javascript:;" id="5516">中类毛利汇总</a></li>
+								<li><a href="javascript:;" id="5517">库位毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5518">库位商品毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="5519">经营方式毛利汇总报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>卖场<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="5601">日结说明</a></li>
+								<li><a href="javascript:;" id="5602">班次管理</a></li>
+								<li><a href="javascript:;" id="5603">支付宝付款说明</a></li>
+								<li><a href="javascript:;" id="5604">微信支付说明</a></li>
+							</ul>
+						</div>			
+					</div>								
+				</div>	
+				<!-- 生鲜 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>主要<br>功能</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="6101">电子称</a></li>
+								<li><a href="javascript:;" id="6102">永续订单</a></li>
+								<li><a href="javascript:;" id="6103">时段特价单</a></li>
+								<li><a href="javascript:;" id="6104">部门调货单</a></li>
+								<li><a href="javascript:;" id="6105">部门调货汇总表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>相关<br>功能</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="6201">组合商品</a></li>
+								<li><a href="javascript:;" id="6202">自动组拆汇总表</a></li>
+								<li><a href="javascript:;" id="6203">组合拆分单</a></li>
+								<li><a href="javascript:;" id="6204">组合拆分汇总表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>生鲜<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="6301">电子称说明</a></li>
+								<li><a href="javascript:;" id="6302">肉类分割</a></li>
+								<li><a href="javascript:;" id="6303">舒适加工</a></li>
+								<li><a href="javascript:;" id="6304">面包房</a></li>
+								<li><a href="javascript:;" id="6305">水果分级</a></li>
+							</ul>
+						</div>			
+					</div>						
+				</div>			
+				<!-- 批发 -->
+				<div class="tab-list">
+					<!-- 客户信息 -->
+					<div class="tab-h">
+						<span>客户<br>信息</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7101">客户区域管理</a></li>
+								<li><a href="javascript:;" id="7102">客户类别管理</a></li>
+								<li><a href="javascript:;" id="7103">客户商品关系</a></li>
+								<li><a href="javascript:;" id="7104">客户档案</a></li>
+								<li><a href="javascript:;" id="7105">批发价调价单</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 批发业务 -->
+					<div class="tab-h">
+						<span>批发<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7201">批发订单</a></li>
+								<li><a href="javascript:;" id="7202">销售订单状态跟踪</a></li>
+								<li><a href="javascript:;" id="7203">批发销售单</a></li>
+								<li><a href="javascript:;" id="7204">批发退货单</a></li>
+								<li><a href="javascript:;" id="7205">业务员销售提成</a></li>
+								<li><a href="javascript:;" id="7206">批发发票录入</a></li>
+								<li><a href="javascript:;" id="7241">客户费用单</a></li>
+								<li><a href="javascript:;" id="7242">客户结算单</a></li>
+								<li><a href="javascript:;" id="7243">客户到期帐款报表</a></li>
+								<li><a href="javascript:;" id="7244">应收帐款汇总报表</a></li>
+								<li><a href="javascript:;" id="7245">应收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="7246">客户历史往来帐款报表</a></li>
+								<li><a href="javascript:;" id="7247">已收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="7248">客户信誉额度报表</a></li>
+								<li><a href="javascript:;" id="7249">客户历史往来帐款汇总报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 批发查询 -->
+					<div class="tab-h">
+						<span>批发<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7301">批发类单据查询</a></li>
+								<li><a href="javascript:;" id="7302">批发发票查询</a></li>
+								<li><a href="javascript:;" id="7303">客户赠品报表</a></li>
+								<li><a href="javascript:;" id="7304">无业务客户报表</a></li>
+								<li><a href="javascript:;" id="7305">商品批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7306">类别批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7307">大类批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7308">主供应商批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7309">区域批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7310">品牌批发汇总报表</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<!-- 销售查询 -->
+					<div class="tab-h">
+						<span>销售<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7401">客户销售汇总报表</a></li>
+								<li><a href="javascript:;" id="7402">客户销售商品汇总报表</a></li>
+								<li><a href="javascript:;" id="7403">客户销售让利汇总报表</a></li>
+								<li><a href="javascript:;" id="7404">批发销售明细报表</a></li>
+								<li><a href="javascript:;" id="7405">业务员客户销售报表</a></li>
+								<li><a href="javascript:;" id="7406">业务员客户销售明细报表</a></li>
+								<li><a href="javascript:;" id="7407">业务员批发销售明细报表</a></li>
+							</ul>						
+						</div>		
+					</div>	
+					<!-- 批发毛利 -->
+					<div class="tab-h">
+						<span>批发<br>毛利</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7501">商品批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7502">批发单据毛利报表</a></li>
+								<li><a href="javascript:;" id="7503">商品批发日毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7504">类别批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7505">大类批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7506">客户毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7507">业务员毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7508">区域毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7509">客户类别毛利汇总报表</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<!-- 批发说明 -->
+					<div class="tab-h">
+						<span>批发<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7601">多批发价体系</a></li>
+							</ul>						
+						</div>		
+					</div>						
+				</div>	
+				<!-- 库管 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>库管<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8101">领用单</a></li>
+								<li><a href="javascript:;" id="8102">折损单</a></li>
+								<li><a href="javascript:;" id="8103">转仓单</a></li>
+								<li><a href="javascript:;" id="8104">库存调整单</a></li>
+								<li><a href="javascript:;" id="8105">成本调价单</a></li>
+								<li><a href="javascript:;" id="8106">库存异常与告警</a></li>
+								<li><a href="javascript:;" id="8107">库存设置</a></li>
+								<li><a href="javascript:;" id="8108">组合拆分单</a></li>
+
+								<li><a href="javascript:;" id="8141">仓库类单据查询</a></li>
+								<li><a href="javascript:;" id="8142">库存调整汇总表</a></li>
+								<li><a href="javascript:;" id="8143">成本调整查询</a></li>
+								<li><a href="javascript:;" id="8144">领用汇总表</a></li>
+								<li><a href="javascript:;" id="8145">报损汇总表</a></li>
+								<li><a href="javascript:;" id="8146">转仓商品汇总</a></li>
+								<li><a href="javascript:;" id="8147">转仓类别汇总</a></li>
+								<li><a href="javascript:;" id="8148">转仓分部汇总</a></li>
+								<li><a href="javascript:;" id="8149">转仓明细查询</a></li>
+								<li><a href="javascript:;" id="8150">库存调整明细表</a></li>
+								<li><a href="javascript:;" id="8151">组合拆分汇总表</a></li>
+								<li><a href="javascript:;" id="8152">SX3700盘点机</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>盘点<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;"  id="8201">盘点计划</a></li>
+								<li><a href="javascript:;"  id="8202">预盘单</a></li>
+								<li><a href="javascript:;"  id="8203">盘点号申请</a></li>
+								<li><a href="javascript:;"  id="8204">存货盘点单</a></li>
+								<li><a href="javascript:;"  id="8205">盘点差异处理单</a></li>
+								<li><a href="javascript:;"  id="8206">盘点报表</a></li>
+								<li><a href="javascript:;"  id="8207">预盘单明细</a></li>
+								<li><a href="javascript:;"  id="8208">点货</a></li>
+								<li><a href="javascript:;"  id="8209">核对盘点差异</a></li>
+								<li><a href="javascript:;"  id="8210">盘点机</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>库存<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8301">商品库存汇总</a></li>
+								<li><a href="javascript:;" id="8302">类别库存汇总</a></li>
+								<li><a href="javascript:;" id="8303">实时库存</a></li>
+								<li><a href="javascript:;" id="8304">出入库汇总</a></li>
+								<li><a href="javascript:;" id="8305">出入库明细</a></li>
+								<li><a href="javascript:;" id="8306">机构商品库存汇总</a></li>
+								<li><a href="javascript:;" id="8307">机构大类库存汇总</a></li>
+								<li><a href="javascript:;" id="8308">分店库存汇总</a></li>
+								<li><a href="javascript:;" id="8309">历史库存查询</a></li>
+								<li><a href="javascript:;" id="8310">库存分析报表</a></li>
+								<li><a href="javascript:;" id="8311">在途库存报表</a></li>
+								<li><a href="javascript:;" id="8312">大类库存汇总</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>业务<br>汇总</span>
+						<div class="shelf-info">
+							<ul>
+								<!--<li><a href="javascript:;" id="8141">仓库类单据查询</a></li>
+								<li><a href="javascript:;" id="8142">库存调整汇总表</a></li>
+								<li><a href="javascript:;" id="8143">成本价格调整查询</a></li>
+								<li><a href="javascript:;" id="8144">领用汇总表</a></li>
+								<li><a href="javascript:;" id="8145">报损汇总表</a></li>
+								<li><a href="javascript:;" id="8146">转仓商品汇总</a></li>
+								<li><a href="javascript:;" id="8147">转仓类别汇总</a></li>
+								<li><a href="javascript:;" id="8148">转仓分部汇总</a></li>
+								<li><a href="javascript:;" id="8149">转仓明细查询</a></li>
+								<li><a href="javascript:;" id="8150">库存调整明细表</a></li>
+								<li><a href="javascript:;" id="8151">组合拆分汇总表</a></li>-->
+								<li><a href="javascript:;" id="8412">报损大类汇总报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>批次<br>库存</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8501">批次结存</a></li>
+								<li><a href="javascript:;" id="8502">批次进销存</a></li>
+								<li><a href="javascript:;" id="8503">批次未冲销数据</a></li>
+								<li><a href="javascript:;" id="8504">批次出库</a></li>
+								<li><a href="javascript:;" id="8505">商品批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8506">类别批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8507">大类批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8508">商品批次毛利报表</a></li>
+								<li><a href="javascript:;" id="8509">类别批次毛利报表</a></li>
+								<li><a href="javascript:;" id="8510">大类批次毛利报表</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>进销存<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8601">商品进销存日报表</a></li>
+								<li><a href="javascript:;" id="8602">类别进销存类别日报表</a></li>
+								<li><a href="javascript:;" id="8603">大类进销存日报表</a></li>
+								<li><a href="javascript:;" id="8604">供应商进销存日报表</a></li>
+								<li><a href="javascript:;" id="8605">商品进销存报表</a></li>
+								<li><a href="javascript:;" id="8606">类别进销存报表</a></li>
+								<li><a href="javascript:;" id="8607">供应商进销存汇总报表</a></li>
+							</ul>
+						</div>			
+					</div>
+				</div>
+				<!-- 卡券 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>卡券<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9101">会员设置</a></li>
+								<li><a href="javascript:;" id="9102">会员设置向导</a></li>
+								<li><a href="javascript:;" id="9103">批量制卡</a></li>
+								<li><a href="javascript:;" id="9104">发卡</a></li>
+								<li><a href="javascript:;" id="9105">会员档案</a></li>
+								<li><a href="javascript:;" id="9106">卡管理</a></li>
+								<li><a href="javascript:;" id="9107">换卡补卡</a></li>
+								<li><a href="javascript:;" id="9108">会员档案审核</a></li>
+								<li><a href="javascript:;" id="9109">会员限量特价单</a></li>
+								<li><a href="javascript:;" id="9110">批量删除会员</a></li>
+								<li><a href="javascript:;" id="9111">会员结构分析</a></li>
+								<li><a href="javascript:;" id="9112">会员生日</a></li>
+								<li><a href="javascript:;" id="9113">批量修改会员信息</a></li>
+								<li><a href="javascript:;" id="9114">一卡通用户设置</a></li>
+
+								<li><a href="javascript:;" id="9141">积分业务查询</a></li>
+								<li><a href="javascript:;" id="9142">>会员消费查询</a></li>
+								<li><a href="javascript:;" id="9143">>储值卡查询</a></li>
+								<li><a href="javascript:;" id="9144">>储值卡消费查询</a></li>
+								<li><a href="javascript:;" id="9145">>积分清楚</a></li>
+								<li><a href="javascript:;" id="9146">>卡管理操作日志报表</a></li>
+
+								<li><a href="javascript:;" id="9181">>会员优惠价</a></li>
+								<li><a href="javascript:;" id="9182">>卡介质说明</a></li>
+								<li><a href="javascript:;" id="9183">>积分升级</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>积分<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9201">积分业务查询</a></li>
+								<li><a href="javascript:;" id="9202">会员积分兑换</a></li>
+								<li><a href="javascript:;" id="9203">会员礼品管理</a></li>
+								<li><a href="javascript:;" id="9204">会员消费查询</a></li>
+								<li><a href="javascript:;" id="9205">积分清除</a></li>
+								<li><a href="javascript:;" id="9206">时段积分</a></li>
+								<li><a href="javascript:;" id="9207">会员积分奖励</a></li>
+								<li><a href="javascript:;" id="9604">积分升级</a></li>
+								<li><a href="javascript:;" id="9284">会员消费积分</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>储值<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9301">储值卡查询</a></li>
+								<li><a href="javascript:;" id="9302">储值卡消费查询</a></li>
+								<li><a href="javascript:;" id="9303">充值</a></li>
+								<li><a href="javascript:;" id="9304">批量充值</a></li>
+								<li><a href="javascript:;" id="9305">积分转储值</a></li>
+								<li><a href="javascript:;" id="9306">批量积分转储值</a></li>
+								<li><a href="javascript:;" id="9307">一卡通消费查询</a></li>
+								<li><a href="javascript:;" id="9381">储值消费</a></li>
+								<li><a href="javascript:;" id="9382">安全储值卡方案</a></li>
+							</ul>
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>卡<br>流程</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9401">会员设置</a></li>
+								<li><a href="javascript:;" id="9402">发卡</a></li>
+								<li><a href="javascript:;" id="9403">卡入库</a></li>
+								<li><a href="javascript:;" id="9404">卡领用</a></li>
+								<li><a href="javascript:;" id="9405">卡销售</a></li>
+								<li><a href="javascript:;" id="9406">卡销售统计</a></li>
+								<li><a href="javascript:;" id="9407">卡领用统计</a></li>
+								<li><a href="javascript:;" id="9408">卡入库统计</a></li>
+								<li><a href="javascript:;" id="9409">卡制作统计</a></li>
+								<li><a href="javascript:;" id="9441">卡管理</a></li>
+								<li><a href="javascript:;" id="9481">卡流程说明</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>购物券<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9501">券设置</a></li>
+								<li><a href="javascript:;" id="9502">制券</a></li>
+								<li><a href="javascript:;" id="9503">券入库</a></li>
+								<li><a href="javascript:;" id="9504">券领用</a></li>
+								<li><a href="javascript:;" id="9505">券销售</a></li>
+								<li><a href="javascript:;" id="9506">券作废</a></li>
+								<li><a href="javascript:;" id="9507">券统计</a></li>
+								<li><a href="javascript:;" id="9508">电子赠券统计报表</a></li>
+								<li><a href="javascript:;" id="9581">券流程说明</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>卡券<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="9601">卡流程说明</a></li>
+								<li><a href="javascript:;" id="9602">券流程说明</a></li>
+								<li><a href="javascript:;" id="9603">会员优惠价</a></li>
+								<!--<li><a href="javascript:;" id="9604">积分升级</a></li>-->
+								<li><a href="javascript:;" id="9605">安全储值卡方案</a></li>
+								<li><a href="javascript:;" id="9606">卡介质说明</a></li>
+								<li><a href="javascript:;" id="9607">会员消费积分</a></li>
+								<li><a href="javascript:;" id="9608">储值消费</a></li>
+							</ul>						
+						</div>	
+					</div>											
+				</div>				
+				<!-- 短信 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>相关<br>设置</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="I101">短信设置</a></li>
+								<li><a href="javascript:;" id="I102">短信组管理</a></li>
+								<li><a href="javascript:;" id="I103">短信成员管理</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>短信<br>发送</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="I201">短信单发</a></li>
+								<li><a href="javascript:;" id="I202">短信群发</a></li>
+								<li><a href="javascript:;" id="I203">会员短信群发</a></li>
+								<li><a href="javascript:;" id="I204">短信查询</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>短信<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="I301">短信业务说明</a></li>
+							</ul>						
+						</div>			
+					</div>						
+				</div>				
+				<!-- 连锁 -->
+				<div class="tab-list">
+					<!-- 传输管理 -->
+					<div class="tab-h">
+						<span>传输<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B101">分店业务设置</a></li>
+								<li><a href="javascript:;" id="B102">店组信息</a></li>
+								<li><a href="javascript:;" id="B104">传输日志</a></li>
+								<li><a href="javascript:;" id="B105">传输断点调整</a></li>
+								<li><a href="javascript:;" id="B106">传输明细日志</a></li>
+								<li><a href="javascript:;" id="B107">总部数据分发</a></li>
+								<li><a href="javascript:;" id="B109">分部数据接收</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 智能配送 -->
+					<div class="tab-h">
+						<span>智能<br>配送</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B201">要货单</a></li>
+								<li><a href="javascript:;" id="B202">门店补货向导</a></li>
+								<li><a href="javascript:;" id="B203">囤货分析</a></li>
+								<li><a href="javascript:;" id="B204">配货池</a></li>
+								<li><a href="javascript:;" id="B205">采购配货单</a></li>
+								<li><a href="javascript:;" id="B206">配货池查询</a></li>
+								<li><a href="javascript:;" id="B207">补货跟踪报表</a></li>
+								<li><a href="javascript:;" id="B208">门店要货单状态跟踪报表</a></li>
+								<li><a href="javascript:;" id="B209">门店到货率分析报表</a></li>
+								<li><a href="javascript:;" id="B210">门店缺货分析报表</a></li>
+								<li><a href="javascript:;" id="B211">门店要货汇总报表</a></li>
+								<li><a href="javascript:;" id="B212">门店要货商品汇总报表</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 配送业务 -->
+					<div class="tab-h">
+						<span>配送<br>业务员</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B301">配送出库单</a></li>
+								<li><a href="javascript:;" id="B302">配送入库单</a></li>
+								<li><a href="javascript:;" id="B303">直调单</a></li>
+								<li><a href="javascript:;" id="B304">店间调拨入库单</a></li>
+								<li><a href="javascript:;" id="B305">店间调拨出库单</a></li>
+							</ul>							
+						</div>		
+					</div>
+					<!-- 拣货管理 -->
+					<div class="tab-h">
+						<span>拣货<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B401">摘果式拣货单</a></li>
+								<li><a href="javascript:;" id="B402">播种式拣货单</a></li>
+								<li><a href="javascript:;" id="B403">拣货向导</a></li>
+								<li><a href="javascript:;" id="B404">拣货报表查询</a></li>
+								<li><a href="javascript:;" id="B405">仓库分拣明细报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 配送查询 -->
+					<div class="tab-h">
+						<span>配送<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B501">配送率分析报表</a></li>
+								<li><a href="javascript:;" id="B502">调出单查询报表</a></li>
+								<li><a href="javascript:;" id="B503">配送率分析-暗淡汇总报表</a></li>
+								<li><a href="javascript:;" id="B504">配送商品汇总报表</a></li>
+								<li><a href="javascript:;" id="B505">配送调拨类单据查询</a></li>
+								<li><a href="javascript:;" id="B506">配送类别汇总报表</a></li>
+								<li><a href="javascript:;" id="B507">配送分部汇总报表</a></li>
+								<li><a href="javascript:;" id="B508">加盟店单据毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="B509">调拨商品汇总报表</a></li>
+								<li><a href="javascript:;" id="B510">调拨类别汇总报表</a></li>
+								<li><a href="javascript:;" id="B511">调拨分部汇总报表</a></li>
+								<li><a href="javascript:;" id="B512">直调查询</a></li>
+								<li><a href="javascript:;" id="B513">调入单查询报表</a></li>
+								<li><a href="javascript:;" id="B514">加盟店单据毛利明细报表</a></li>
+								<li><a href="javascript:;" id="B515">配送商品明细报表</a></li>
+								<li><a href="javascript:;" id="B516">差异回调报表</a></li>
+								<li><a href="javascript:;" id="B517">配送大类汇总报表</a></li>
+								<li><a href="javascript:;" id="B518">调拨商品你明细报表</a></li>
+								<li><a href="javascript:;" id="B519">直营店单据毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="B520">直营店单据毛利明细报表</a></li>
+								<li><a href="javascript:;" id="B521">配送明细报表</a></li>
+							</ul>								
+						</div>
+				
+					</div>
+					<!-- 连锁说明 -->
+					<div class="tab-h">
+						<span>连锁<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B601">分店业务说明</a></li>
+								<li><a href="javascript:;" id="B602">配货池说明</a></li>
+								<li><a href="javascript:;" id="B603">拣货向导说明</a></li>
+							</ul>						
+						</div>	
+					</div>				
+				</div>
+				<!-- 客服 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>送货<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="D101">车辆管理</a></li>
+								<li><a href="javascript:;" id="D102">送货单派工</a></li>
+								<li><a href="javascript:;" id="D103">送货单反馈</a></li>
+								<li><a href="javascript:;" id="D104">送货单月报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>安装<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+							<li><a href="javascript:;" id="D201">安装单派工</a></li>
+								<li><a href="javascript:;" id="D202">安装单反馈</a></li>
+								<li><a href="javascript:;" id="D203">安装单月报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>售后<br>故管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="D301">售后服务单受理</a></li>
+								<li><a href="javascript:;" id="D302">售后服务单派工</a></li>
+								<li><a href="javascript:;" id="D303">售后服务单反馈</a></li>
+								<li><a href="javascript:;" id="D304">售后服务月报表</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<div class="tab-h">
+						<span>投诉<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="D401">顾客投诉登记</a></li>
+								<li><a href="javascript:;" id="D402">顾客投诉处理</a></li>
+								<li><a href="javascript:;" id="D403">顾客投诉处理月报表</a></li>
+							</ul>						
+						</div>		
+					</div>								
+				</div>	
+				<!-- 系统 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>权限<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="H101">操作员管理</a></li>
+								<li><a href="javascript:;" id="H102">操作员权限</a></li>
+								<li><a href="javascript:;" id="H103">操作员数据权限</a></li>
+								<li><a href="javascript:;" id="H104">收银员</a></li>
+								<li><a href="javascript:;" id="H105">菜单自定义</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>系统<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="H201">系统设置</a></li>
+								<li><a href="javascript:;" id="H202">系统数据管理</a></li>
+								<li><a href="javascript:;" id="H203">数据库管理</a></li>
+								<li><a href="javascript:;" id="H204">历史数据删除</a></li>
+								<li><a href="javascript:;" id="H205">授权管理</a></li>
+								<li><a href="javascript:;" id="H206">一键优化</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>其他<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="H301">自定义报表</a></li>
+								<li><a href="javascript:;" id="H302">机构登录设置</a></li>
+								<li><a href="javascript:;" id="H303">操作日志</a></li>
+								<li><a href="javascript:;" id="H304">公告</a></li>
+								<li><a href="javascript:;" id="H305">我的邮件</a></li>
+								<li><a href="javascript:;" id="H306">报表单据模板</a></li>
+								<li><a href="javascript:;" id="H307">部门岗位</a></li>
+								<li><a href="javascript:;" id="H308">员工档案</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<div class="tab-h">
+						<span>系统<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="H501">单据模板</a></li>
+							</ul>						
+						</div>	
+					</div>							
+				</div>			
+
+				<div class="menu a-fadeinT">
+					<div class="menu-bg">
+						<div class="menu-l"></div>
+						<div class="menu-c"></div>
+						<div class="menu-r"></div>
+					</div>
+					<ul>
+						<li><div><span class="da"></span></div><a href="javascript:;">档案</a></li>
+						<li><div><span class="jg"></span></div><a href="javascript:;">价格</a></li>
+						<li><div><span class="mc"></span></div><a href="javascript:;">卖场</a></li>
+						<li><div><span class="sx"></span></div><a href="javascript:;">生鲜</a></li>
+						<li><div><span class="pf"></span></div><a href="javascript:;">批发</a></li>
+						<li><div><span class="kg"></span></div><a href="javascript:;">库管</a></li>
+						<li><div><span class="kq"></span></div><a href="javascript:;">卡券</a></li>
+						<li><div><span class="dx"></span></div><a href="javascript:;">短信</a></li>
+						<li><div><span class="ls"></span></div><a href="javascript:;">连锁</a></li>
+						<li><div><span class="kf"></span></div><a href="javascript:;">客服</a></li>
+						<li><div><span class="xt"></span></div><a href="javascript:;">系统</a></li>
+					</ul>
+				</div>								
+			</div>
+			<div class="tab-item">
+				<!-- 档案 -->
+				<div class="tab-list" style="display: block;">
+					<!-- 往来单位 -->
+					<div class="tab-h">
+						<span>往来<br>单位</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1101r">供应商档案</a></li>
+								<li><a href="javascript:;" id="1102r">客户类别</a></li>
+								<li><a href="javascript:;" id="1103r">客户区域</a></li>
+								<li><a href="javascript:;" id="1104r">客户档案</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 商品信息 -->
+					<div class="tab-h">
+						<span>商品<br>信息</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1201r">商品品类</a></li>
+								<li><a href="javascript:;" id="1202r">商品档案</a></li>
+								<li><a href="javascript:;" id="1203r">组合商品</a></li>
+								<li><a href="javascript:;" id="1205r">分店SKU管理</a></li>
+								<li><a href="javascript:;" id="1206r">分店商品配置</a></li>
+								<li><a href="javascript:;" id="1207r">新品申请</a></li>
+								<li><a href="javascript:;" id="1208r">新品审核</a></li>
+								<li><a href="javascript:;" id="1209r">新品试销分析报表</a></li>
+								<li><a href="javascript:;" id="1210r">商品综合查询</a></li>
+								<li><a href="javascript:;" id="1211r">商品异常查询</a></li>
+								<li><a href="javascript:;" id="1212r">条码黑名单</a></li>
+								<li><a href="javascript:;" id="1213r">商品属性检查</a></li>
+								<li><a href="javascript:;" id="1214r">组合商品查询</a></li>
+								<li><a href="javascript:;" id="1215r">商品课组</a></li>
+
+								<li><a href="javascript:;" id="1241r">商品设置</a></li>
+								<li><a href="javascript:;" id="1242r">批量修改商品属性</a></li>
+								<li><a href="javascript:;" id="1243r">基础代码</a></li>
+								<li><a href="javascript:;" id="1244r">助记码更新</a></li>
+								<li><a href="javascript:;" id="1246r">导出商品</a></li>
+								<li><a href="javascript:;" id="1247r">普通价签</a></li>
+								<li><a href="javascript:;" id="1248r">条码价签</a></li>
+								<li><a href="javascript:;" id="1249r">调价历史查询</a></li>
+
+								<li><a href="javascript:;" id="1601r">商品条码</a></li>
+								<li><a href="javascript:;" id="1602r">改包销售</a></li>
+								<li><a href="javascript:;" id="1603r">礼篮</a></li>
+								<li><a href="javascript:;" id="1604r">加工品</a></li>
+								<li><a href="javascript:;" id="1605r">一码多品</a></li>
+							</ul>
+						</div>				
+					</div>
+					<!-- 分店机构 -->
+					<div class="tab-h">
+						<span>分店<br>机构</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1301r">分店仓库</a></li>
+								<li><a href="javascript:;" id="1302r">货架货位</a></li>
+								<li><a href="javascript:;" id="1303r">商品陈列与存量指标</a></li>
+							</ul>							
+						</div>
+					</div>
+					<!-- 生命周期 -->
+					<div class="tab-h">
+						<span>生命<br>周期</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1401r">商品生命周期</a></li>
+								<li><a href="javascript:;" id="1402r">供应商生命周期</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 档案辅助 -->
+					<div class="tab-h">
+						<span>档案<br>辅助</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1501r">商品设置</a></li>
+								<li><a href="javascript:;" id="1502r">商品转供应商</a></li>
+								<li><a href="javascript:;" id="1503r">供应商转经营方式</a></li>
+								<li><a href="javascript:;" id="1504r">批量修改商品属性</a></li>
+								<li><a href="javascript:;" id="1506r">基础代码</a></li>
+								<li><a href="javascript:;" id="1507r">助记码更新</a></li>
+								<li><a href="javascript:;" id="1508r">导出盘点商品</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 档案说明 -->
+					<div class="tab-h">
+						<span>档案<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="1601rr">商品条码</a></li>
+								<li><a href="javascript:;" id="1602rr">改包销售</a></li>
+								<li><a href="javascript:;" id="1603rr">礼篮</a></li>
+								<li><a href="javascript:;" id="1604rr">加工品</a></li>
+								<li><a href="javascript:;" id="1605rr">一码多品</a></li>
+							</ul>						
+						</div>	
+					</div>
+				</div> 
+				<!-- 合同 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>采购<br>合同</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2101r">购销合同建立</a></li>
+								<li><a href="javascript:;" id="2102r">代销合同建立</a></li>
+								<li><a href="javascript:;" id="2103r">扣率代销合同建立</a></li>
+								<li><a href="javascript:;" id="2104r">联营合同建立</a></li>
+								<li><a href="javascript:;" id="2105r">租赁合同建立</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>合同<br>维护</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2202r">合同暂停</a></li>
+								<li><a href="javascript:;" id="2203r">合同解除</a></li>
+								<li><a href="javascript:;" id="2204r">合同作废</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<div class="tab-h">
+						<span>合同<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2301r">合同业务</a></li>
+								<li><a href="javascript:;" id="2302r">合同流程</a></li>
+							</ul>							
+						</div>			
+					</div>
+				</div>
+				<!-- 采购 -->
+				<div class="tab-list">
+					<!-- 补货管理 -->
+					<div class="tab-h">
+						<span>补货<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3102">导购</a></li>
+								<li><a href="javascript:;" id="3103">补货申请单</a></li>
+								<li><a href="javascript:;" id="3104">批量处理补货单</a></li>
+								<li><a href="javascript:;" id="3105">捕获分析表</a></li>
+								<li><a href="javascript:;" id="3106">永续订单</a></li>
+								<li><a href="javascript:;" id="3107">补货分析表（按分店和商品分组）</a></li>
+								<li><a href="javascript:;" id="3141">采购订单状态报表</a></li>
+								<li><a href="javascript:;" id="3142">采购订单到货率报表</a></li>
+								<li><a href="javascript:;" id="3143">采购订单到期报表</a></li>
+								<li><a href="javascript:;" id="3144">采购订单类别汇总报表</a></li>
+								<li><a href="javascript:;" id="3145">单据批量打印</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 采购业务 -->
+					<div class="tab-h">
+						<span>采购<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3201r">采购订单</a></li>
+								<li><a href="javascript:;" id="3202">采购订单状态跟踪</a></li>
+								<li><a href="javascript:;" id="3203">采购收货单</a></li>
+								<li><a href="javascript:;" id="3204">采购退货单</a></li>
+								<li><a href="javascript:;" id="3205">单据批量打印</a></li>
+								<li><a href="javascript:;" id="3206">条码打印</a></li>
+								<li><a href="javascript:;" id="3207">采购退货通知单</a></li>
+
+								<li><a href="javascript:;" id="3241">供应商档案</a></li>
+								<li><a href="javascript:;" id="3201">采购订单</a></li>
+								<li><a href="javascript:;" id="3301r">采购设置</a></li>
+								<li><a href="javascript:;" id="3302r">发票录入</a></li>
+								<li><a href="javascript:;" id="3303r">询价单</a></li>
+								<li><a href="javascript:;" id="3601r">条码打印说明</a></li>
+								<li><a href="javascript:;" id="3282">保质期管理</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 采购辅助 -->
+					<div class="tab-h">
+						<span>采购<br>辅助</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3301">采购设置</a></li>
+								<li><a href="javascript:;" id="3302">发票录入</a></li>
+								<li><a href="javascript:;" id="3303">询价单</a></li>
+								<li><a href="javascript:;" id="3304">发票查询</a></li>
+								<li><a href="javascript:;" id="3305">询价单明细查询</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 采购报表 -->
+					<div class="tab-h">
+						<span>采购<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3401">采购商品汇总报表</a></li>
+								<li><a href="javascript:;" id="3402">采购大类汇总报表</a></li>
+								<li><a href="javascript:;" id="3403">采购类别汇总报表</a></li>
+								<li><a href="javascript:;" id="3404">采购订单状态报表</a></li>
+								<li><a href="javascript:;" id="3405">采购订单到货率报表</a></li>
+								<li><a href="javascript:;" id="3406">采购订单到期报表</a></li>
+								<li><a href="javascript:;" id="3407">采购订单类别汇总报表</a></li>
+								<li><a href="javascript:;" id="3408">采购类单据查询</a></li>
+								<li><a href="javascript:;" id="3410">采购订单供应商汇总报表</a></li>
+								<li><a href="javascript:;" id="3411">采购商品明细报表</a></li>
+								<li><a href="javascript:;" id="3412">采购中类汇总报表</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 供应商相关 -->
+					<div class="tab-h">
+						<span>供应商<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3502">采购供应商汇总报表</a></li>
+								<li><a href="javascript:;" id="3503">供应商销售汇总</a></li>
+								<li><a href="javascript:;" id="3504">供应商销售明细报表</a></li>
+								<li><a href="javascript:;" id="3505">供应商送货信用度报表</a></li>
+								<li><a href="javascript:;" id="3506">供应商机构销售汇总报表</a></li>
+								<li><a href="javascript:;" id="3507">供应商每天单品销售报表</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 采购说明 -->
+					<div class="tab-h">
+						<span>采购<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="3601">条码打印说明</a></li>
+								<li><a href="javascript:;" id="3602">保质期管理</a></li>
+							</ul>								
+						</div>
+					</div>								
+				</div>	
+				<!-- 批发 -->
+				<div class="tab-list">
+					<!-- 客户信息 -->
+					<div class="tab-h">
+						<span>客户<br>信息</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7101r">客户区域管理</a></li>
+								<li><a href="javascript:;" id="7102r">客户类别管理</a></li>
+								<li><a href="javascript:;" id="7103r">客户商品关系</a></li>
+								<li><a href="javascript:;" id="7104r">客户档案</a></li>
+								<li><a href="javascript:;" id="7105r">批发价调价单</a></li>
+							</ul>						
+						</div>				
+					</div>
+					<!-- 批发业务 -->
+					<div class="tab-h">
+						<span>批发<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7201r">批发订单</a></li>
+								<li><a href="javascript:;" id="7202r">销售订单状态跟踪</a></li>
+								<li><a href="javascript:;" id="7203r">批发销售单</a></li>
+								<li><a href="javascript:;" id="7204r">批发退货单</a></li>
+								<li><a href="javascript:;" id="7205r">业务员销售提成</a></li>
+								<li><a href="javascript:;" id="7206r">批发发票录入</a></li>
+								<li><a href="javascript:;" id="7241r">客户费用单</a></li>
+								<li><a href="javascript:;" id="7242r">客户结算单</a></li>
+								<li><a href="javascript:;" id="7243r">客户到期帐款报表</a></li>
+								<li><a href="javascript:;" id="7244r">应收帐款汇总报表</a></li>
+								<li><a href="javascript:;" id="7245r">应收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="7246r">客户历史往来帐款报表</a></li>
+								<li><a href="javascript:;" id="7247r">已收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="7248r">客户信誉额度报表</a></li>
+								<li><a href="javascript:;" id="7249r">客户历史往来帐款汇总报表</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 批发查询 -->
+					<div class="tab-h">
+						<span>批发<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7301r">批发类单据查询</a></li>
+								<li><a href="javascript:;" id="7302r">批发发票查询</a></li>
+								<li><a href="javascript:;" id="7303r">客户赠品报表</a></li>
+								<li><a href="javascript:;" id="7304r">无业务客户报表</a></li>
+								<li><a href="javascript:;" id="7305r">商品批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7306r">类别批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7307r">大类批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7308r">主供应商批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7309r">区域批发汇总报表</a></li>
+								<li><a href="javascript:;" id="7310r">品牌批发汇总报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 销售查询 -->
+					<div class="tab-h">
+						<span>销售<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7401r">客户销售汇总报表</a></li>
+								<li><a href="javascript:;" id="7402r">客户销售商品汇总报表</a></li>
+								<li><a href="javascript:;" id="7403r">客户销售让利汇总报表</a></li>
+								<li><a href="javascript:;" id="7404r">批发销售明细报表</a></li>
+								<li><a href="javascript:;" id="7405r">业务员客户销售报表</a></li>
+								<li><a href="javascript:;" id="7406r">业务员客户销售明细报表</a></li>
+								<li><a href="javascript:;" id="7407r">业务员批发销售明细报表</a></li>
+							</ul>						
+						</div>			
+					</div>	
+					<!-- 批发毛利 -->
+					<div class="tab-h">
+						<span>批发<br>毛利</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7501r">商品批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7502r">批发单据毛利报表</a></li>
+								<li><a href="javascript:;" id="7503r">商品批发日毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7504r">类别批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7505r">大类批发毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7506r">客户毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7507r">业务员毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7508r">区域毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="7509r">客户类别毛利汇总报表</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<!-- 批发说明 -->
+					<div class="tab-h">
+						<span>批发<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="7601r">多批发价体系</a></li>
+							</ul>						
+						</div>			
+					</div>						
+				</div>	
+				<!-- 库管 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>库管<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8101r">领用单</a></li>
+								<li><a href="javascript:;" id="8102r">折损单</a></li>
+								<li><a href="javascript:;" id="8103r">转仓单</a></li>
+								<li><a href="javascript:;" id="8104r">库存调整单</a></li>
+								<li><a href="javascript:;" id="8105r">成本调价单</a></li>
+								<li><a href="javascript:;" id="8106r">库存异常与告警</a></li>
+								<li><a href="javascript:;" id="8107r">库存设置</a></li>
+								<li><a href="javascript:;" id="8108r">组合拆分单</a></li>
+
+								<li><a href="javascript:;" id="8401r">仓库类单据查询</a></li>
+								<li><a href="javascript:;" id="8402r">库存调整汇总表</a></li>
+								<li><a href="javascript:;" id="8403r">成本调整查询</a></li>
+								<li><a href="javascript:;" id="8404r">领用汇总表</a></li>
+								<li><a href="javascript:;" id="8405r">折损汇总表</a></li>
+								<li><a href="javascript:;" id="8406r">转仓商品汇总</a></li>
+								<li><a href="javascript:;" id="8407r">转仓类别汇总</a></li>
+								<li><a href="javascript:;" id="8408r">转仓分部汇总</a></li>
+								<li><a href="javascript:;" id="8409r">转仓明细查询</a></li>
+								<li><a href="javascript:;" id="8410r">库存调整明细表</a></li>
+								<li><a href="javascript:;" id="8411r">组合拆分汇总表</a></li>
+								<li><a href="javascript:;" id="8152r">SX3700盘点机</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>盘点<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8201r">盘点计划</a></li>
+								<li><a href="javascript:;" id="8202r">预盘单</a></li>
+								<li><a href="javascript:;" id="8203r">盘点号申请</a></li>
+								<li><a href="javascript:;" id="8204r">存货盘点单</a></li>
+								<li><a href="javascript:;" id="8205r">盘点差异处理单</a></li>
+								<li><a href="javascript:;" id="8206r">盘点报表</a></li>
+								<li><a href="javascript:;" id="8207r">预盘单明细</a></li>
+								<li><a href="javascript:;" id="8208r">点货</a></li>
+								<li><a href="javascript:;" id="8209r">核对盘点差异</a></li>
+								<li><a href="javascript:;" id="8210r">盘点机</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div class="tab-h">
+						<span>库存<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8301r">商品库存汇总</a></li>
+								<li><a href="javascript:;" id="8302r">类别库存汇总</a></li>
+								<li><a href="javascript:;" id="8303r">实时库存</a></li>
+								<li><a href="javascript:;" id="8304r">出入库汇总</a></li>
+								<li><a href="javascript:;" id="8305r">出入库明细</a></li>
+								<li><a href="javascript:;" id="8306r">机构商品库存汇总</a></li>
+								<li><a href="javascript:;" id="8307r">机构大类库存汇总</a></li>
+								<li><a href="javascript:;" id="8308r">分店库存汇总</a></li>
+								<li><a href="javascript:;" id="8309r">历史库存查询</a></li>
+								<li><a href="javascript:;" id="8310r">库存分析报表</a></li>
+								<li><a href="javascript:;" id="8311r">在途库存报表</a></li>
+								<li><a href="javascript:;" id="8312r">大类库存汇总</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div class="tab-h">
+						<span>业务<br>汇总</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8401">仓库类单据查询</a></li>
+								<li><a href="javascript:;" id="8402">库存调整汇总表</a></li>
+								<li><a href="javascript:;" id="8403">成本价格调整查询</a></li>
+								<li><a href="javascript:;" id="8404">领用汇总表</a></li>
+								<li><a href="javascript:;" id="8405">折损汇总表</a></li>
+								<li><a href="javascript:;" id="8406">转仓商品汇总</a></li>
+								<li><a href="javascript:;" id="8407">转仓类别汇总</a></li>
+								<li><a href="javascript:;" id="8408">转仓分部汇总</a></li>
+								<li><a href="javascript:;" id="8409">转仓明细查询</a></li>
+								<li><a href="javascript:;" id="8410">库存调整明细表</a></li>
+								<li><a href="javascript:;" id="8411">组合差分汇总表</a></li>
+								<li><a href="javascript:;" id="8412r">报损大类汇总报表</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>批次<br>库存</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8501r">批次结存</a></li>
+								<li><a href="javascript:;" id="8502r">批次进销存</a></li>
+								<li><a href="javascript:;" id="8503r">批次未冲销数据</a></li>
+								<li><a href="javascript:;" id="8504r">批次出库</a></li>
+								<li><a href="javascript:;" id="8505r">商品批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8506r">类别批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8507r">大类批次毛利日报表</a></li>
+								<li><a href="javascript:;" id="8508r">商品批次毛利报表</a></li>
+								<li><a href="javascript:;" id="8509r">类别批次毛利报表</a></li>
+								<li><a href="javascript:;" id="8510r">大类批次毛利报表</a></li>
+							</ul>
+						</div>				
+					</div>
+					<div class="tab-h">
+						<span>进销存<br>业务</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="8601r">商品进销存日报表</a></li>
+								<li><a href="javascript:;" id="8602r">类别进销存类别日报表</a></li>
+								<li><a href="javascript:;" id="8603r">大类进销存日报表</a></li>
+								<li><a href="javascript:;" id="8604r">供应商进销存日报表</a></li>
+								<li><a href="javascript:;" id="8605r">商品进销存报表</a></li>
+								<li><a href="javascript:;" id="8606r">类别进销存报表</a></li>
+								<li><a href="javascript:;" id="8607r">供应商进销存汇总报表</a></li>
+							</ul>
+						</div>				
+					</div>
+				</div>
+				<!-- 连锁 -->
+				<div class="tab-list">
+					<!-- 传输管理 -->
+					<div class="tab-h">
+						<span>传输<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B101r">分店业务设置</a></li>
+								<li><a href="javascript:;" id="B102r">店组信息</a></li>
+								<li><a href="javascript:;" id="B104r">传输日志</a></li>
+								<li><a href="javascript:;" id="B105r">传输断点调整</a></li>
+								<li><a href="javascript:;" id="B106r">传输明细日志</a></li>
+								<li><a href="javascript:;" id="B107r">总部数据分发</a></li>
+								<li><a href="javascript:;" id="B109r">分部数据接收</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 智能配送 -->
+					<div class="tab-h">
+						<span>智能<br>配送</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B201r">要货单</a></li>
+								<li><a href="javascript:;" id="B202r">门店补货向导</a></li>
+								<li><a href="javascript:;" id="B203r">囤货分析</a></li>
+								<li><a href="javascript:;" id="B204r">配货池</a></li>
+								<li><a href="javascript:;" id="B205r">采购配货单</a></li>
+								<li><a href="javascript:;" id="B206r">配货池查询</a></li>
+								<li><a href="javascript:;" id="B207r">补货跟踪报表</a></li>
+								<li><a href="javascript:;" id="B208r">门店要货单状态跟踪报表</a></li>
+								<li><a href="javascript:;" id="B209r">门店到货率分析报表</a></li>
+								<li><a href="javascript:;" id="B210r">门店缺货分析报表</a></li>
+								<li><a href="javascript:;" id="B211r">门店要货汇总报表</a></li>
+								<li><a href="javascript:;" id="B212r">门店要货商品汇总报表</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 配送业务 -->
+					<div class="tab-h">
+						<span>配送<br>业务员</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B301r">配送出库单</a></li>
+								<li><a href="javascript:;" id="B302r">配送入库单</a></li>
+								<li><a href="javascript:;" id="B303r">直调单</a></li>
+								<li><a href="javascript:;" id="B304r">店间调拨入库单</a></li>
+								<li><a href="javascript:;" id="B305r">店间调拨出库单</a></li>
+							</ul>							
+						</div>			
+					</div>
+					<!-- 拣货管理 -->
+					<div class="tab-h">
+						<span>拣货<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B401r">摘果式拣货单</a></li>
+								<li><a href="javascript:;" id="B402r">播种式拣货单</a></li>
+								<li><a href="javascript:;" id="B403r">拣货向导</a></li>
+								<li><a href="javascript:;" id="B404r">拣货报表查询</a></li>
+								<li><a href="javascript:;" id="B405r">仓库分拣明细报表</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 配送查询 -->
+					<div class="tab-h">
+						<span>配送<br>查询</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B501r">配送率分析报表</a></li>
+								<li><a href="javascript:;" id="B502r">调出单查询报表</a></li>
+								<li><a href="javascript:;" id="B503r">配送率分析-暗淡汇总报表</a></li>
+								<li><a href="javascript:;" id="B504r">配送商品汇总报表</a></li>
+								<li><a href="javascript:;" id="B505r">配送调拨类单据查询</a></li>
+								<li><a href="javascript:;" id="B506r">配送类别汇总报表</a></li>
+								<li><a href="javascript:;" id="B507r">配送分部汇总报表</a></li>
+								<li><a href="javascript:;" id="B508r">加盟店单据毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="B509r">调拨商品汇总报表</a></li>
+								<li><a href="javascript:;" id="B510r">调拨类别汇总报表</a></li>
+								<li><a href="javascript:;" id="B511r">调拨分部汇总报表</a></li>
+								<li><a href="javascript:;" id="B512r">直调查询</a></li>
+								<li><a href="javascript:;" id="B513r">调入单查询报表</a></li>
+								<li><a href="javascript:;" id="B514r">加盟店单据毛利明细报表</a></li>
+								<li><a href="javascript:;" id="B515r">配送商品明细报表</a></li>
+								<li><a href="javascript:;" id="B516r">差异回调报表</a></li>
+								<li><a href="javascript:;" id="B517r">配送大类汇总报表</a></li>
+								<li><a href="javascript:;" id="B518r">调拨商品明细报表</a></li>
+								<li><a href="javascript:;" id="B519r">直营店单据毛利汇总报表</a></li>
+								<li><a href="javascript:;" id="B520r">直营店单据毛利明细报表</a></li>
+								<li><a href="javascript:;" id="B521r">配送明细报表</a></li>
+							</ul>								
+						</div>
+				
+					</div>
+					<!-- 连锁说明 -->
+					<div class="tab-h">
+						<span>连锁<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="B601r">分店业务说明</a></li>
+								<li><a href="javascript:;" id="B602r">配货池说明</a></li>
+								<li><a href="javascript:;" id="B603r">拣货向导说明</a></li>
+							</ul>						
+						</div>		
+					</div>				
+				</div>
+				<!-- 百货 -->
+				<div class="tab-list">
+					<!-- 相关资料 -->
+					<div class="tab-h">
+						<span>相关<br>资料</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="J101">供应商档案</a></li>
+								<li><a href="javascript:;" id="J102">商品档案</a></li>
+								<li><a href="javascript:;" id="J103">柜台营业员</a></li>
+								<li><a href="javascript:;" id="J104">费用代码</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 价格管理 -->
+					<div class="tab-h">
+						<span>价格<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="J201">调价单</a></li>
+								<li><a href="javascript:;" id="J202">促销特价单</a></li>
+								<li><a href="javascript:;" id="J203">DM促销单</a></li>
+								<li><a href="javascript:;" id="J204">优惠券促销单</a></li>
+								<li><a href="javascript:;" id="J205">量贩价促销单</a></li>
+								<li><a href="javascript:;" id="J206">促销终止</a></li>
+								<li><a href="javascript:;" id="J207">当前促销查询</a></li>
+								<li><a href="javascript:;" id="J208">促销业绩查询</a></li>
+								<li><a href="javascript:;" id="J209">优惠券销售查询</a></li>
+								<li><a href="javascript:;" id="J210">DM促销跟踪报表</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 卖场相关 -->
+					<div class="tab-h">
+						<span>卖场<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="J301">卖场监控</a></li>
+								<li><a href="javascript:;" id="J302">流水查询</a></li>
+								<li><a href="javascript:;" id="J303">柜台销售查询</a></li>
+								<li><a href="javascript:;" id="J304">商品销售汇总报表</a></li>
+								<li><a href="javascript:;" id="J305">时段销售分析</a></li>
+							</ul>						
+						</div>			
+					</div>
+					<!-- 合同管理 -->
+					<div class="tab-h">
+						<span>合同<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="J401">租赁合同建立</a></li>
+								<li><a href="javascript:;" id="J402">联营合同建立</a></li>
+								<li><a href="javascript:;" id="J403">合同暂停</a></li>
+								<li><a href="javascript:;" id="J404">合同解除</a></li>
+								<li><a href="javascript:;" id="J405">合同作废</a></li>
+							</ul>						
+						</div>		
+					</div>	
+					<!-- 结算管理 -->
+					<div class="tab-h">
+						<span>结算<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="J501">租赁帐款</a></li>
+								<li><a href="javascript:;" id="J502">联营帐款</a></li>
+								<li><a href="javascript:;" id="J504">费用单</a></li>
+								<li><a href="javascript:;" id="J505">供应商对帐单</a></li>
+								<li><a href="javascript:;" id="J506">供应商付款单</a></li>
+
+								<li><a href="javascript:;" id="A401r">供应商到期帐款报表</a></li>
+								<li><a href="javascript:;" id="A402r">应收帐款汇总报表</a></li>
+								<li><a href="javascript:;" id="A214r">供应商往来账</a></li>
+								<li><a href="javascript:;" id="A209r">供应商费用明细报表</a></li>
+								<li><a href="javascript:;" id="A210r">供应商费用汇总报表</a></li>
+								<li><a href="javascript:;" id="A207r">联营商品销售表</a></li>
+							</ul>						
+						</div>
+					</div>							
+				</div>	
+				<!-- 微店 -->
+				<div class="tab-list">
+					<!-- 订单管理 -->
+					<div class="tab-h">
+						<span>订单<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="K206">微商店2.0订单报表</a></li>
+							</ul>						
+						</div>				
+					</div>							
+				</div>						
+				<div class="menu a-fadeinT">
+					<div class="menu-bg">
+						<div class="menu-l"></div>
+						<div class="menu-c"></div>
+						<div class="menu-r"></div>
+					</div>
+					<ul>
+					    <li><div><span class="da"></span></div><a href="javascript:;" >档案</a></li>
+						<li><div><span class="ht"></span></div><a href="javascript:;">合同</a></li>
+						<li><div><span class="cg"></span></div><a href="javascript:;">采购</a></li>
+						<li><div><span class="pf"></span></div><a href="javascript:;">批发</a></li>
+						<li><div><span class="kg"></span></div><a href="javascript:;">库管</a></li>
+						<li><div><span class="ls"></span></div><a href="javascript:;">连锁</a></li>
+						<li><div><span class="bh"></span></div><a href="javascript:;">百货</a></li>
+						<li><div><span class="wd"></span></div><a href="javascript:;">微店</a></li>
+					</ul>
+				</div>				
+			</div>
+			<div class="tab-item">
+				<!-- 决策 -->
+				<div class="tab-list">
+					<!-- 月结月报 -->
+					<div class="tab-h">
+						<span>月结<br>月报</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G101r">月结</a></li>
+								<li><a href="javascript:;" id="G102r">进销存月商品汇总</a></li>
+								<li><a href="javascript:;" id="G103">进销存月类别汇总</a></li>
+								<li><a href="javascript:;" id="G104">进销存月大类汇总</a></li>
+								<li><a href="javascript:;" id="G105">进销存月主供应商汇总</a></li>
+								<li><a href="javascript:;" id="G106">进销存月中级类别汇总</a></li>
+								<li><a href="javascript:;" id="G107">进销存月品牌汇总</a></li>
+								<li><a href="javascript:;" id="G112">商品毛利月报表</a></li>
+								<li><a href="javascript:;" id="G113">类别毛利月报表</a></li>
+								<li><a href="javascript:;" id="G114">大类毛利月报表</a></li>
+								<li><a href="javascript:;" id="G115">主供应商毛利月报表</a></li>
+								<li><a href="javascript:;" id="G116">中级类别毛利月报表</a></li>
+								<li><a href="javascript:;" id="G117">品牌毛利月报表</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<!-- 供应商分析 -->
+					<div class="tab-h">
+						<span>供应商<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G201">供应商销售排行</a></li>
+								<li><a href="javascript:;" id="G202">供应商送货分析 </a></li>
+								<li><a href="javascript:;" id="G203">供应商退货分析</a></li>
+								<li><a href="javascript:;" id="G204">供应商结款分析</a></li>
+								<li><a href="javascript:;" id="G205">供应商综合分析</a></li>
+								<li><a href="javascript:;" id="G206">供应商贡献度分析 </a></li>
+								<li><a href="javascript:;" id="G207">供应商信誉度分析</a></li>
+								<li><a href="javascript:;" id="G208">供应商信誉度分析（商品）</a></li>
+								<li><a href="javascript:;" id="G209">供应商商品分析</a></li>
+								<li><a href="javascript:;" id="G210">供应商月效益分析</a></li>
+								<li><a href="javascript:;" id="G211">供应商品牌销售分析</a></li>
+								<li><a href="javascript:;" id="G212">供应商品牌销售明细</a></li>
+								<li><a href="javascript:;" id="G213">供应商信誉分析（订单）</a></li>
+								<li><a href="javascript:;" id="G214">经营方式分析</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<!-- 周报分析 -->
+					<div class="tab-h">
+						<span>周报<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G301">商品销售周报</a></li>
+								<li><a href="javascript:;" id="G302">类别销售周报</a></li>
+								<li><a href="javascript:;" id="G303">大类销售周报</a></li>
+								<li><a href="javascript:;" id="G304">品牌销售周报</a></li>
+								<li><a href="javascript:;" id="G305">门店销售周报</a></li>
+								<li><a href="javascript:;" id="G306">供应商销售周报</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 商品分析 -->
+					<div class="tab-h">
+						<span>商品<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G401">商品销售排行</a></li>
+								<li><a href="javascript:;" id="G402">畅销商品</a></li>
+								<li><a href="javascript:;" id="G403">滞销商品</a></li>
+								<li><a href="javascript:;" id="G404">价格走势分析</a></li>
+								<li><a href="javascript:;" id="G405">商品价格分析</a></li>
+								<li><a href="javascript:;" id="G406">ABC分析</a></li>
+								<li><a href="javascript:;" id="G407">商品价格带分析</a></li>
+								<li><a href="javascript:;" id="G408">商品价格带销售分析</a></li>
+								<li><a href="javascript:;" id="G409">商品结构分析（大类）</a></li>
+								<li><a href="javascript:;" id="G410">商品结构分析（类别）</a></li>
+								<li><a href="javascript:;" id="G411">主推商品报表</a></li>
+								<li><a href="javascript:;" id="G412">商品销售增长率分析</a></li>
+								<li><a href="javascript:;" id="G413">商品库存金额分析</a></li>
+								<li><a href="javascript:;" id="G414">商品周转率分析</a></li>
+								<li><a href="javascript:;" id="G415">商品交叉比率分析</a></li>
+							</ul>							
+						</div>
+					</div>	
+					<!-- 对比分析 -->
+					<div class="tab-h">
+						<span>对比<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G501">商品月销售对比</a></li>
+								<li><a href="javascript:;" id="G502">类别月销售对比</a></li>
+								<li><a href="javascript:;" id="G503">大类月销售对比</a></li>
+								<li><a href="javascript:;" id="G504">品牌月销售对比</a></li>
+								<li><a href="javascript:;" id="G505">供应商月销售对比</a></li>
+								<li><a href="javascript:;" id="G506">供应商月采购对比</a></li>
+								<li><a href="javascript:;" id="G507">商品月同期对比</a></li>
+								<li><a href="javascript:;" id="G508">类别月同期对比</a></li>
+								<li><a href="javascript:;" id="G509">大类月同期对比</a></li>
+								<li><a href="javascript:;" id="G510">供应商月同期对比</a></li>
+								<li><a href="javascript:;" id="G511">品牌月同期对比</a></li>
+								<li><a href="javascript:;" id="G512">门店月同期对比</a></li>
+								<li><a href="javascript:;" id="G513">综合对比分析</a></li>
+							</ul>							
+						</div>
+					</div>
+					<!-- 店组报表 -->
+					<div class="tab-h">
+						<span>店组<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G601">店组销售汇总</a></li>
+								<li><a href="javascript:;" id="G602">店组商品汇总</a></li>
+								<li><a href="javascript:;" id="G603">店组大类汇总</a></li>
+								<li><a href="javascript:;" id="G604">店组分部汇总</a></li>
+								<li><a href="javascript:;" id="G605">店组类别汇总</a></li>
+								<li><a href="javascript:;" id="G606">店组-商品库存分析</a></li>
+								<li><a href="javascript:;" id="G607">店组-类别库存分析</a></li>
+								<li><a href="javascript:;" id="G608">店组-大类库存分析</a></li>
+								<li><a href="javascript:;" id="G609">店组-供应商采购汇总报表</a></li>
+								<li><a href="javascript:;" id="G610">店组-供应商销售汇总报表</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 其他报表 -->
+					<div class="tab-h">
+						<span>其他<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G701">消费群体分析</a></li>
+								<li><a href="javascript:;" id="G702">库存积压分析</a></li>
+								<li><a href="javascript:;" id="G703">时段销售对比分析</a></li>
+								<li><a href="javascript:;" id="G704">环比销售分析</a></li>
+								<li><a href="javascript:;" id="G705">营业额增长率分析</a></li>
+								<li><a href="javascript:;" id="G706">毛利增长分析</a></li>
+								<li><a href="javascript:;" id="G707">会员忠诚度分析</a></li>
+								<li><a href="javascript:;" id="G708">会员群体分析</a></li>
+								<li><a href="javascript:;" id="G709">商品月销售环比</a></li>
+								<li><a href="javascript:;" id="G710">类别月销售环比</a></li>
+								<li><a href="javascript:;" id="G711">门店月销售环比</a></li>
+								<li><a href="javascript:;" id="G712">主供应商月销售环比</a></li>
+								<li><a href="javascript:;" id="G713">门店类别日销售对比</a></li>
+								<li><a href="javascript:;" id="G716">经营总况日报表</a></li>
+							</ul>						
+						</div>
+						
+					</div>							
+				</div>			
+				<div class="menu a-fadeinT">
+					<div class="menu-bg">
+						<div class="menu-l"></div>
+						<div class="menu-c"></div>
+						<div class="menu-r"></div>
+					</div>
+					<ul class="menul">
+						<li ><div><span class="ht"></span></div><a href="javascript:;">合同</a></li>
+					</ul>
+				</div>				
+			</div>	
+			<div class="tab-item">
+				<!-- 决策 -->
+				<div class="tab-list">
+					<!-- 月结月报 -->
+					<div class="tab-h">
+						<span>月结<br>月报</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G101r">月结</a></li>
+								<li><a href="javascript:;" id="G102r">进销存月商品汇总</a></li>
+								<li><a href="javascript:;" id="G103">进销存月类别汇总</a></li>
+								<li><a href="javascript:;" id="G104">进销存月大类汇总</a></li>
+								<li><a href="javascript:;" id="G105">进销存月主供应商汇总</a></li>
+								<li><a href="javascript:;" id="G106">进销存月中级类别汇总</a></li>
+								<li><a href="javascript:;" id="G107">进销存月品牌汇总</a></li>
+								<li><a href="javascript:;" id="G112">商品毛利月报表</a></li>
+								<li><a href="javascript:;" id="G113">类别毛利月报表</a></li>
+								<li><a href="javascript:;" id="G114">大类毛利月报表</a></li>
+								<li><a href="javascript:;" id="G115">主供应商毛利月报表</a></li>
+								<li><a href="javascript:;" id="G116">中级类别毛利月报表</a></li>
+								<li><a href="javascript:;" id="G117">品牌毛利月报表</a></li>
+							</ul>						
+						</div>	
+					</div>
+					<!-- 供应商分析 -->
+					<div class="tab-h">
+						<span>供应商<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G201">供应商销售排行</a></li>
+								<li><a href="javascript:;" id="G202">供应商送货分析 </a></li>
+								<li><a href="javascript:;" id="G203">供应商退货分析</a></li>
+								<li><a href="javascript:;" id="G204">供应商结款分析</a></li>
+								<li><a href="javascript:;" id="G205">供应商综合分析</a></li>
+								<li><a href="javascript:;" id="G206">供应商贡献度分析 </a></li>
+								<li><a href="javascript:;" id="G207">供应商信誉度分析</a></li>
+								<li><a href="javascript:;" id="G208">供应商信誉度分析（商品）</a></li>
+								<li><a href="javascript:;" id="G209">供应商商品分析</a></li>
+								<li><a href="javascript:;" id="G210">供应商月效益分析</a></li>
+								<li><a href="javascript:;" id="G211">供应商品牌销售分析</a></li>
+								<li><a href="javascript:;" id="G212">供应商品牌销售明细</a></li>
+								<li><a href="javascript:;" id="G213">供应商信誉分析（订单）</a></li>
+								<li><a href="javascript:;" id="G214">经营方式分析</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<!-- 周报分析 -->
+					<div class="tab-h">
+						<span>周报<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G301">商品销售周报</a></li>
+								<li><a href="javascript:;" id="G302">类别销售周报</a></li>
+								<li><a href="javascript:;" id="G303">大类销售周报</a></li>
+								<li><a href="javascript:;" id="G304">品牌销售周报</a></li>
+								<li><a href="javascript:;" id="G305">门店销售周报</a></li>
+								<li><a href="javascript:;" id="G306">供应商销售周报</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 商品分析 -->
+					<div class="tab-h">
+						<span>商品<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G401">商品销售排行</a></li>
+								<li><a href="javascript:;" id="G402">畅销商品</a></li>
+								<li><a href="javascript:;" id="G403">滞销商品</a></li>
+								<li><a href="javascript:;" id="G404">价格走势分析</a></li>
+								<li><a href="javascript:;" id="G405">商品价格分析</a></li>
+								<li><a href="javascript:;" id="G406">ABC分析</a></li>
+								<li><a href="javascript:;" id="G407">商品价格带分析</a></li>
+								<li><a href="javascript:;" id="G408">商品价格带销售分析</a></li>
+								<li><a href="javascript:;" id="G409">商品结构分析（大类）</a></li>
+								<li><a href="javascript:;" id="G410">商品结构分析（类别）</a></li>
+								<li><a href="javascript:;" id="G411">主推商品报表</a></li>
+								<li><a href="javascript:;" id="G412">商品销售增长率分析</a></li>
+								<li><a href="javascript:;" id="G413">商品库存金额分析</a></li>
+								<li><a href="javascript:;" id="G414">商品周转率分析</a></li>
+								<li><a href="javascript:;" id="G415">商品交叉比率分析</a></li>
+							</ul>							
+						</div>
+					</div>	
+					<!-- 对比分析 -->
+					<div class="tab-h">
+						<span>对比<br>分析</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G501">商品月销售对比</a></li>
+								<li><a href="javascript:;" id="G502">类别月销售对比</a></li>
+								<li><a href="javascript:;" id="G503">大类月销售对比</a></li>
+								<li><a href="javascript:;" id="G504">品牌月销售对比</a></li>
+								<li><a href="javascript:;" id="G505">供应商月销售对比</a></li>
+								<li><a href="javascript:;" id="G506">供应商月采购对比</a></li>
+								<li><a href="javascript:;" id="G507">商品月同期对比</a></li>
+								<li><a href="javascript:;" id="G508">类别月同期对比</a></li>
+								<li><a href="javascript:;" id="G509">大类月同期对比</a></li>
+								<li><a href="javascript:;" id="G510">供应商月同期对比</a></li>
+								<li><a href="javascript:;" id="G511">品牌月同期对比</a></li>
+								<li><a href="javascript:;" id="G512">门店月同期对比</a></li>
+								<li><a href="javascript:;" id="G513">综合对比分析</a></li>
+							</ul>							
+						</div>
+					</div>
+					<!-- 店组报表 -->
+					<div class="tab-h">
+						<span>店组<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G601">店组销售汇总</a></li>
+								<li><a href="javascript:;" id="G602">店组商品汇总</a></li>
+								<li><a href="javascript:;" id="G603">店组大类汇总</a></li>
+								<li><a href="javascript:;" id="G604">店组分部汇总</a></li>
+								<li><a href="javascript:;" id="G605">店组类别汇总</a></li>
+								<li><a href="javascript:;" id="G606">店组-商品库存分析</a></li>
+								<li><a href="javascript:;" id="G607">店组-类别库存分析</a></li>
+								<li><a href="javascript:;" id="G608">店组-大类库存分析</a></li>
+								<li><a href="javascript:;" id="G609">店组-供应商采购汇总报表</a></li>
+								<li><a href="javascript:;" id="G610">店组-供应商销售汇总报表</a></li>
+							</ul>						
+						</div>
+					</div>
+					<!-- 其他报表 -->
+					<div class="tab-h">
+						<span>其他<br>报表</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G701">消费群体分析</a></li>
+								<li><a href="javascript:;" id="G702">库存积压分析</a></li>
+								<li><a href="javascript:;" id="G703">时段销售对比分析</a></li>
+								<li><a href="javascript:;" id="G704">环比销售分析</a></li>
+								<li><a href="javascript:;" id="G705">营业额增长率分析</a></li>
+								<li><a href="javascript:;" id="G706">毛利增长分析</a></li>
+								<li><a href="javascript:;" id="G707">会员忠诚度分析</a></li>
+								<li><a href="javascript:;" id="G708">会员群体分析</a></li>
+								<li><a href="javascript:;" id="G709">商品月销售环比</a></li>
+								<li><a href="javascript:;" id="G710">类别月销售环比</a></li>
+								<li><a href="javascript:;" id="G711">门店月销售环比</a></li>
+								<li><a href="javascript:;" id="G712">主供应商月销售环比</a></li>
+								<li><a href="javascript:;" id="G713">门店类别日销售对比</a></li>
+								<li><a href="javascript:;" id="G716">经营总况日报表</a></li>
+							</ul>						
+						</div>
+						
+					</div>							
+				</div>				
+				<!-- 预警 --> 
+				<div class="tab-list" style="display: block;">
+					<div class="tab-h">
+						<span>预警<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="G101">预警设置</a></li>
+								<li><a href="javascript:;" id="G102">预警说明</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<div class="tab-h">
+						<span>库存<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="C201">库存告警</a></li>
+								<li><a href="javascript:;" id="C202">过期催销</a></li>
+								<li><a href="javascript:;" id="C203">异常成本</a></li>
+								<li><a href="javascript:;" id="C204">负库存商品</a></li>
+								<li><a href="javascript:;" id="C205">未审核单据</a></li>
+								<li><a href="javascript:;" id="C206">负毛利商品</a></li>
+								<li><a href="javascript:;" id="C207">要货单预警</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<div class="tab-h">
+						<span>价格<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="C301">特价到期</a></li>
+								<li><a href="javascript:;" id="C302">特价生效</a></li>
+								<li><a href="javascript:;" id="C303">价格异常</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<div class="tab-h">
+						<span>采购<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="C401">到期订单</a></li>
+								<li><a href="javascript:;" id="C402">商品属性异常</a></li>
+								<li><a href="javascript:;" id="C403">供应商营业执照有效期提醒</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<div class="tab-h">
+						<span>其它</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="C501">系统异常日志</a></li>
+								<li><a href="javascript:;" id="C502">会员生日提醒</a></li>
+								<li><a href="javascript:;" id="C503">到期应收</a></li>
+								<li><a href="javascript:;" id="C504">到期应付</a></li>
+								<li><a href="javascript:;" id="C505">合同到期</a></li>
+								<li><a href="javascript:;" id="C506">新品审核预警</a></li>
+								<li><a href="javascript:;" id="C507">新品转正</a></li>
+								<li><a href="javascript:;" id="C508">促销计划生效</a></li>
+							</ul>						
+						</div>
+
+					</div>
+				</div>
+				<!-- 审批 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>审批<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="E101">审批说明</a></li>
+								<li><a href="javascript:;" id="E102">审批流程设置</a></li>
+								<li><a href="javascript:;" id="E103">集中审批</a></li>
+								<li><a href="javascript:;" id="E104">审批查询</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+				</div>
+				<!-- 预算 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>销售<br>计划</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="F101">类别销售计划</a></li>
+								<li><a href="javascript:;" id="F102">业务员销售计划</a></li>
+								<li><a href="javascript:;" id="F103">营业员销售计划</a></li>
+								<li><a href="javascript:;" id="F104">店组销售计划</a></li>
+							</ul>						
+						</div>
+					
+					</div>
+					<div class="tab-h">
+						<span>商品<br>信息</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="F201">类别销售计划完成度</a></li>
+								<li><a href="javascript:;" id="F202">业务员销售计划完成度</a></li>
+								<li><a href="javascript:;" id="F203">营业员销售计划完成度</a></li>
+								<li><a href="javascript:;" id="F204">店组销售计划完成度</a></li>
+							</ul>							
+						</div>
+				
+					</div>
+				</div>	
+				<div class="menu a-fadeinT">
+					<div class="menu-bg">
+						<div class="menu-l"></div>
+						<div class="menu-c"></div>
+						<div class="menu-r"></div>
+					</div>
+					<ul>
+						<li><div><span class="jc"></span></div><a href="javascript:;">决策</a></li>		
+						<li><div><span class="yj"></span></div><a href="javascript:;">预警</a></li>
+						<li><div><span class="sp"></span></div><a href="javascript:;">审批</a></li>
+						<li><div><span class="ys"></span></div><a href="javascript:;">预算</a></li>
+					</ul>
+				</div>					
+			</div>
+			<div class="tab-item">
+				<!-- 结算 -->
+				<div class="tab-list" style="display: block;">
+					<div class="tab-h">
+						<span>应付<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A101">购销返利计算</a></li>
+								<li><a href="javascript:;" id="A102">代销帐款</a></li>
+								<li><a href="javascript:;" id="A103">联营帐款</a></li>
+								<li><a href="javascript:;" id="A104">扣率代销帐款</a></li>
+								<li><a href="javascript:;" id="A105">租赁账帐款</a></li>
+								<li><a href="javascript:;" id="A107">费用单</a></li>
+								<li><a href="javascript:;" id="A108">扣补单</a></li>
+								<li><a href="javascript:;" id="A109">供应商对帐单</a></li>
+								<li><a href="javascript:;" id="A110">供应商付款单</a></li>
+								<li><a href="javascript:;" id="A113">供应商预付款单</a></li>
+								<li><a href="javascript:;" id="A115">供应商批量结算</a></li>
+								<li><a href="javascript:;" id="A116">供应商批量对账</a></li>
+								<li><a href="javascript:;" id="A117">历史供应商对帐单查看</a></li>
+								<li><a href="javascript:;" id="A118">历史供应商付款单查看</a></li>
+								<li><a href="javascript:;" id="A119">账期查询</a></li>
+								<li><a href="javascript:;" id="A120">扣补向导</a></li>
+								<li><a href="javascript:;" id="A141">采购商品汇总报表</a></li>
+								<li><a href="javascript:;" id="A142">采购大类汇总报表</a></li>
+								<li><a href="javascript:;" id="A143">采购类别汇总报表</a></li>
+								<li><a href="javascript:;" id="A144">采购供应商汇总报表</a></li>
+								<li><a href="javascript:;" id="A145">历史进价查询</a></li>
+								<li><a href="javascript:;" id="A146">供应商到期账款报表</a></li>
+								<li><a href="javascript:;" id="A147">应付账款汇总报表</a></li>
+								<li><a href="javascript:;" id="A148">应付账款明细报表</a></li>
+								<li><a href="javascript:;" id="A149">供应商历史往来账款汇总报表</a></li>
+								<li><a href="javascript:;" id="A150">实付账款明细报表</a></li>
+								<li><a href="javascript:;" id="A151">供应商对账单明细报表</a></li>
+								<li><a href="javascript:;" id="A152">供应商对帐情况报表</a></li>
+							</ul>					
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>应付<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A401rr">客户到期帐款报表</a></li>
+								<li><a href="javascript:;" id="A402rr">应收账款汇总报表</a></li>
+								<li><a href="javascript:;" id="A403rr">应收账款明细报表</a></li>
+								<li><a href="javascript:;" id="A204">供应商历史往来账款报表</a></li>
+								<li><a href="javascript:;" id="A205">实付账款明细报表</a></li>
+								<li><a href="javascript:;" id="A206">代销查询</a></li>
+								<li><a href="javascript:;" id="A207">联营商品销售表</a></li>
+								<li><a href="javascript:;" id="A208">扣率代销查询</a></li>
+								<li><a href="javascript:;" id="A209">供应商费用明细报表</a></li>
+								<li><a href="javascript:;" id="A210">供应商费用汇总报表</a></li>
+								<li><a href="javascript:;" id="A211">供应商费用机构汇总报表</a></li>
+								<li><a href="javascript:;" id="A212">扣补单查询报表</a></li>
+								<li><a href="javascript:;" id="A213">扣补单明细查询</a></li>
+								<li><a href="javascript:;" id="A214">供应商往来账</a></li>
+								<li><a href="javascript:;" id="A215">供应商账款查询</a></li>
+							</ul>					
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>应收<br>管理</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A301">客户费用单</a></li>
+								<li><a href="javascript:;" id="A302">客户结算单</a></li>
+								<li><a href="javascript:;" id="A303">内部费用单</a></li>
+								<li><a href="javascript:;" id="A304">内部收款单</a></li>
+								<li><a href="javascript:;" id="A305">客户预收款单</a></li>
+								<li><a href="javascript:;" id="A306">客户收款单</a></li>
+							</ul>								
+						</div>			
+					</div>
+					<div class="tab-h">
+						<span>应收<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A401">客户到期帐款报表</a></li>
+								<li><a href="javascript:;" id="A402">应收帐款汇总报表</a></li>
+								<li><a href="javascript:;" id="A403">应收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="A404">客户历史往来帐款报表</a></li>
+								<li><a href="javascript:;" id="A405">已收帐款明细报表</a></li>
+								<li><a href="javascript:;" id="A406">客户信誉额度报表</a></li>
+								<li><a href="javascript:;" id="A407">客户历史往来帐款汇总报表</a></li>
+								<li><a href="javascript:;" id="A408">内部帐款查询</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>结算<br>相关</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A501">结算设置</a></li>
+								<li><a href="javascript:;" id="A502">账务代码</a></li>
+								<li><a href="javascript:;" id="A503">费用代码</a></li>
+							</ul>						
+						</div>		
+					</div>
+					<div class="tab-h">
+						<span>结算<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="A601">结算业务</a></li>
+								<li><a href="javascript:;" id="A602">经营方式</a></li>
+							</ul>						
+						</div>			
+					</div>				
+				</div>	
+				<!-- 合同 -->
+				<div class="tab-list">
+					<div class="tab-h">
+						<span>采购<br>合同</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2101">购销合同建立</a></li>
+								<li><a href="javascript:;" id="2102">代销合同建立</a></li>
+								<li><a href="javascript:;" id="2103">扣率代销合同建立</a></li>
+								<li><a href="javascript:;" id="2104">联营合同建立</a></li>
+								<li><a href="javascript:;" id="2105">租赁合同建立</a></li>
+							</ul>						
+						</div>
+					</div>
+					<div class="tab-h">
+						<span>合同<br>维护</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2202">合同暂停</a></li>
+								<li><a href="javascript:;" id="2203">合同解除</a></li>
+								<li><a href="javascript:;" id="2204">合同作废</a></li>
+							</ul>						
+						</div>
+					</div>
+					<div class="tab-h">
+						<span>合同<br>说明</span>
+						<div class="shelf-info">
+							<ul>
+								<li><a href="javascript:;" id="2301">合同业务</a></li>
+								<li><a href="javascript:;" id="2302">合同流程</a></li>
+							</ul>							
+						</div>		
+					</div>
+				</div>				
+				<div class="menu a-fadeinT">
+					<div class="menu-bg">
+						<div class="menu-l"></div>
+						<div class="menu-c"></div>
+						<div class="menu-r"></div>
+					</div>
+					<ul class="menul">
+						<li><div><span class="js"></span></div><a href="javascript:;">结算</a></li>
+						<li><div><span class="ht"></span></div><a href="javascript:;">合同</a></li>
+					</ul>
+				</div>
+			<div>											
+		</div>
+	</div>
+</div>
+</body>
+</html>
