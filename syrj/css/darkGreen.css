@@ -1,0 +1,170 @@
+/* 顶部 */
+#particles-js{
+  background: -webkit-linear-gradient(0deg, #00CC33, #00CC66, #00CC99); 
+  background: -o-linear-gradient(0deg, #00CC33, #00CC66, #00CC99); 
+  background: -moz-linear-gradient(0deg, #00CC33, #00CC66, #00CC99); 
+  background: linear-gradient(0deg, #00CC33, #00CC66, #00CC99); 
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = #00CC99, endColorstr = #00CC33);       
+}
+
+/* 思维导图 */
+.area div.dht-btn a{
+  /*background: #eef1f8;*/
+  color: #000;
+  box-sizing: border-box;
+  
+/*background: url(../images/dhtWhite5.png);*/
+background: url(../images/dhtGreen2.png);
+
+  -webkit-border-radius: 18px; 
+  -moz-border-radius: 18px; 
+  -o-border-radius: 18px;
+  border-radius: 18px; 
+  box-shadow: 0px 0px 8px #dfe0e3;
+  /*behavior: url(ie-css3.htc);   */
+  /*position: relative;*/
+  /*z-index: 2;*/
+
+  font-weight: normal;
+  /*border-bottom: 1px solid #7bbf37;*/
+  
+}
+
+/* 顶部导航 */
+.menu{
+  background: #009933;
+}
+.active-menu{
+  background: #00CC33;
+}
+
+.active-admin{
+  background: #00CC33;
+}
+/* 一级导航 */
+.navBar{
+  z-index: 4;
+  background: -webkit-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: -o-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: -moz-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = #00CC33, endColorstr = #00CC99);  
+  box-shadow: 0 4px 2px 0 #009933, 0 6px 20px 0 #009933;  
+}
+.navBar ul li.active-nav{
+  /*border-top: 4px solid #bf2c1d;*/
+  background: #e44209;
+  border-bottom: 4px solid #B03407;
+}
+.navBar ul li.active-nav a{
+  color: #fff;
+}
+
+.navBar ul li{
+  border-bottom: 1px dashed #77c691;
+}
+.navBar ul li:last-child{
+  /*border: none;*/
+}
+
+/* 右侧内容 */
+.pageWrap{
+  background: -webkit-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: -o-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: -moz-linear-gradient(180deg, #00CC33, #00CC66, #00CC99); 
+  background: linear-gradient(180deg, #00CC33, #00CC66, #00CC99); /* 标准的语法 */ 
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = #00CC33, endColorstr = #00CC99);  
+  box-shadow: 0 4px 8px 0 #7bbf37, 0 6px 20px 0 #7bbf37;  
+}
+
+/* 更多功能 */
+.page .features-sort ul li.features-sort-on{
+  background: #e44209;
+}
+
+.features-con ol li a:hover{ 
+  background: #009933;
+  border-bottom: 4px solid #1F7B0F;
+  box-sizing: border-box;
+}
+
+/* 下拉选择 */
+.filter-list li.filter-selected,.filter-list li:hover{
+  background: #009933;
+}
+.filter-list li:hover a{
+  color: #fff;
+}
+/* 选择时间 */
+.statistics-date ul.date li.date-active{
+  border-bottom: 2px solid #009933;
+
+}
+
+/* 搜索 */
+#mainSearch form input#search{
+  background: #e44209;
+}
+
+#mainSearch form input.nope-active{
+  border: 2px solid #e44209;
+}
+
+.area div.dht-btn a.dht-btn-bg{
+  background: url(../images/dhtOrange.png);
+  color: #fff;
+  border: none;
+}
+.autocompleter-list li:hover{
+    background: #e44209;
+    color: #fff;
+}
+
+.autocompleter-list li.autocompleter-item-selected {
+    /* Selected State */
+    background: #e44209;
+    color: #fff;
+}
+
+/* 二级导航 */
+.page .subNav ul li.subNav-on i{
+  background: url(../images/555.png);
+  color: #fff;
+
+}
+.page .subNav ul li.subNav-on a{
+  color: #00CC33;
+}
+
+.page .subNav ul li i{
+  background: url(../images/55.png);
+  color: #00CC33;
+}
+
+.page .list>ul li{
+  border-left: 2px solid #00CC33;
+}
+
+.header .logo .mask{
+  background: #009933;;
+}
+
+.list p{
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+  text-indent: 50px;
+  color: #478e14;
+  font-size: 18px;
+}
+
+.area div.dht-btn a:hover{
+  /*background: #009933;*/
+  /*background: url(../images/dhtBlue5.png);*/
+  background: url(../images/btn1.png);
+  color: #fff;
+  box-shadow: 0px 2px 2px 1px rgba(71,142,20,0.4);
+}
+.table .title i{
+  color: #009933;
+}

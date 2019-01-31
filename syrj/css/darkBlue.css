@@ -1,0 +1,124 @@
+/* 顶部 */
+#particles-js{
+  background: #3588cb; 
+}
+
+/* 思维导图 */
+.area div.dht-btn a{
+  /*background: #eef1f8;*/
+  background: url(../images/dhtWhite2.png);
+  color: #000;
+  box-sizing: border-box;
+  border-radius: 18px;
+  font-weight: normal;
+  box-shadow: 0px 0px 8px #dfe0e3;
+}
+
+/* 顶部导航 */
+.menu{
+  background: #185c9b;
+}
+.active-menu{
+  background: #1E8EF1; 
+}
+
+.active-admin{
+  background: #1E8EF1;
+}
+/* 一级导航 */
+.navBar{
+  z-index: 4;
+  background: #0D6FC5;
+  box-shadow: 0 4px 2px 0 #185c9b, 0 6px 10px 0 #185c9b;  	
+}
+
+.navBar ul li.active-nav a{
+  color: #1d619e;
+}
+.navBar ul li.active-nav{
+  background: #b1defd;
+  /*border-bottom: 4px solid #0885D9;*/
+}
+.navBar ul li:last-child{
+  /*border: none;*/
+}
+.navBar ul li a i:first-child{
+  margin-right: 10px;
+}
+.navBar ul li a i{
+  margin-left: 20px;
+}
+/* 右侧内容 */
+.pageWrap{
+  background: #3589cf;
+  box-shadow: 0 4px 8px 0 #00adff, 0 6px 20px 0 #007dff;  
+}
+
+/* 更多功能 */
+.page .features-sort ul li.features-sort-on{
+  background: #ff9043;
+}
+
+.features-con ol li a:hover{ 
+  background: #b1defd;
+  color: #1c63a1;
+}
+.features-con ol li a:hover i{
+  color: #1c63a1;
+}
+
+/* 下拉选择 */
+.filter-list li.filter-selected,.filter-list li:hover{
+  background: #1c63a1;
+}
+.filter-list li:hover a{
+  color: #fff;
+}
+/* 选择时间 */
+.statistics-date ul.date li.date-active{
+  border-bottom: 2px solid #3588cb;
+
+}
+
+/* 搜索 */
+#mainSearch form input#search{
+  background: #ff9043;
+}
+
+#mainSearch form input.nope-active{
+  border: 2px solid #ff9043;
+}
+
+.area div.dht-btn a.dht-btn-bg{
+  background: url(../images/dhtYellow.png);
+  color: #fff;
+  border: none;
+}
+
+/* 二级导航 */
+.page .subNav ul li.subNav-on i{
+  background: url(../images/222.png);
+  color: #fff;
+
+}
+.page .subNav ul li.subNav-on a{
+  color: #1c63a1;
+}
+
+.page .subNav ul li i{
+  background: url(../images/22.png);
+  color: #1c63a1;
+}
+
+.page .list>ul li{
+  border-left: 2px solid #1c63a1;
+}
+
+.header .logo .mask{
+  background:#000 url(../images/menu_bg.jpg);
+}
+.area div.dht-btn a:hover{
+  background: url(../images/btn5.png);
+  color: #fff;
+  box-shadow: 0px 2px 2px 1px rgba(28,150,227,0.2);
+}

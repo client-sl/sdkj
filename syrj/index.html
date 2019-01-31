@@ -1,0 +1,1939 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>商易软件</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=8"> -->
+	<!--links-->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- 选择门店 -->
+	<link rel="stylesheet" type="text/css" href="css/selectFilter.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<!-- 搜索 -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.autocompleter.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" media="screen" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">	
+	<!-- 思维导图 -->
+	<link rel="stylesheet" type="text/css" href="css/swdt.css">
+	<link rel="stylesheet" type="text/css" href="css/features.css">
+	
+
+	<!-- 选择皮肤 -->
+	<link rel="stylesheet" type="text/css" href="css/blue.css" class="skin">
+	<link rel="stylesheet" type="text/css" href="css/darkBlue.css" disabled="disabled" class="skin">
+	<link rel="stylesheet" type="text/css" href="css/brightBlue.css" disabled="disabled" class="skin">
+	<link rel="stylesheet" type="text/css" href="css/blueGreen.css" disabled="disabled" class="skin">	
+	<link rel="stylesheet" type="text/css" href="css/darkGreen.css" id="skin" disabled="disabled" class="skin">
+	<!-- 选择皮肤 -->
+	<link rel="stylesheet" type="text/css" href="css/color.css">
+	<!-- scripts -->
+	<!-- 顶部 -->	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<!-- <script src="js/particles.min.js"></script> -->
+	<!-- 折线图 -->
+	<script type="text/javascript" src="js/jqplot.js"></script>
+	<!-- 时间 -->
+	<script type="text/javascript" src="js/date.js"></script>
+	<!-- 搜索 -->
+	<script type="text/javascript" src="js/jquery.autocompleter.js"></script>
+	
+	<!-- 选择门店 -->
+	<script type="text/javascript" src="js/selectFilter.js"></script>	
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- 只选一种时删掉color.js -->
+	<script type="text/javascript" src="js/color.js"></script>
+<!--[if IE]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <script type="text/javascript" src="js/excanvas.compiled.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="wrap">
+	<div class="header">
+		<div class="title">
+			<h1>
+				<img class="fl" src="images/syl.png"/><a class="fl" href="javascript:;">商易超市管理系统</a>
+			</h1>
+		</div>
+		<div class="fr logo">
+			<div class="mask"></div>
+			<a href="javascript:;"><img src="images/sy1.png"></a>
+		</div>	
+		<div class="top" id="particles-js"><!-- <script src="js/app.js"></script> --></div>
+		
+	</div>
+	<div class="menu">
+		<div class="fl greet">
+			<p><i class="fa fa-heart"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span id="time"></span></p>
+		</div>
+		<!-- 选择皮肤 -->
+		<div id="skin">
+			<p class="target">皮肤<span></span></p>
+			<div class="color fl" style="display: none;">
+				<span title="科技蓝"></span>
+				<span title="深蓝"></span>
+				<span title="亮蓝"></span>
+				<span title="蓝绿"></span>
+				<span title="深绿"></span>
+			</div>
+		</div>
+		<!-- 选择皮肤 -->
+		<ul class="fr fast">
+			<li id="mainSearch">
+		        <form class="">
+		            <input type="text" class="fl" name="nope" id="nope" value="搜索商易"/>
+					<input class="submit" type="submit" name="" value="Go" id="search" style="">
+		        </form>
+			</li>	
+			<li id="admin"><a href="javascript:;"><i class="fa fa-user" ></i>&nbsp;管理员</a></li>
+			<li id="fast"><a href="javascript:;"><i class="fa fa-bookmark" ></i>&nbsp;快速桌面</a></li>
+			<li id="desktop" class="active-menu"><a href="javascript:;"><i class="fa fa-home" ></i>&nbsp;我的桌面</a></li>
+			<li id="exit"><a href="javascript:;"><i class="fa fa-power-off" ></i>&nbsp;</a></li>
+		</ul>
+	</div>	
+	<div class="content clearfix">
+		<div class="navBar fl">
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-info" ></i>&nbsp;档案&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-gift" ></i>&nbsp;采购&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-magnet" ></i>&nbsp;零售&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-chain" ></i>&nbsp;批发&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-barcode" ></i>&nbsp;会员&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-compress" ></i>&nbsp;生鲜&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-eject" ></i>&nbsp;旅游&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-key" ></i>&nbsp;微店&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-pencil" ></i>&nbsp;仓库&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-truck" ></i>&nbsp;结算&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-signal" ></i>&nbsp;连锁&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-sitemap" ></i>&nbsp;决策&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-gears" ></i>&nbsp;系统&nbsp;<i class="fa fa-angle-right" ></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="pageWrap">
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商档案</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">品类组织表</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">组合商品</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商经营方式转换</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn" style="position: relative;">
+                                	<a href="javascript:;">商品档案</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                	<span class="fa fa-rightTop"></span>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">淘汰商品</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">普通价签</a>               	
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">调价单</a>  	
+                                	<span class="fa fa-long-arrow-left"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">商品综合管理</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">商品七大异常</a>
+                                </div>
+                            </div>
+                        </div> 
+                         <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批量修改商品信息</a>
+                                </div>
+                            </div>                         
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">调价生效提醒</a>
+                                </div>
+                            </div>                                                    
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">新品审核</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">分店仓库</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">商品设置</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">基础代码</a>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>    			    		
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>新品申请</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>货架货位</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>商品陈列与存量指标</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>商品陈列</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>导出盘点商品</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>编号修改</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>助记码更新</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>商品转供应商</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量调价</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>条码价签</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>分店商品配置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>商品档案异常</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>调价历史查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>组合商品查询</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>商品条码</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>改包销售</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>礼品</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>加工品</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>一码多品</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>添加条码字体</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>
+		    	</div>		    	
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">供应商档案</a>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl" style="visibility:hidden;">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">导购</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">永续订单</a>
+                                	<span class="fa fa-long-arrow-down"></span> 
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">采购查询</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">导购</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">采购订单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                	<span class="fa fa-rightBottom"></span> 
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商销售分析</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-rightTop"></span>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商综合查询</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">补货分析</a>
+                                	<span class="fa fa-rightTop"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">订单状态监控</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">采购收货单</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存查询</a>
+                                </div>
+                            </div>
+                        </div>                          
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">采购设置</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">条码打印</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商销售分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商综合查询</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 		    		
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>单据批量打印</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>采购类单据查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>供应商销售对比分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>采购订单交叉报表</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>条码打印说明</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>保质期管理</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>托管型分部收货退货</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                     
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">卖场监控</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">流水查询</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">收银对账</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">缴款单</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">销售报表</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">日结</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">成本重结转</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">毛利分析</a>
+                                </div>
+                            </div>
+                        </div>                      
+                    </div> 	
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>拾壹管理</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>POS设置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>POS功能预设</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>缴款设置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>电子称</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>柜台营业员</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>POS登记</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>客户信息查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>时段销售分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客单分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>营业员销售提成</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>柜台销售查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>班次查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>长短款报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>长短款报表(班次)</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>拾壹报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>品牌汇总毛利报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>自定义付款方式收银日报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>自动组拆汇总表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>大类毛利汇总(无机构)</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>零钱包报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>品牌销售汇总表</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>日结说明</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>班次管理</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>促销扣率</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>进货搭赠</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>自然组合促销</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>捆绑促销</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>条件组合促销</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>成本重结账说明</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>托管型分部收货退货</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>支付宝付款说明</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>微信付款说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                      
+		    	</div>
+		    	<div class="list">
+		    		<ul style="height: 180px;">
+		    			<li><a href="javascript:;">促销进价单</a></li>
+		    			<li><a href="javascript:;">促销特价单</a></li>
+		    			<li><a href="javascript:;">时段特价单</a></li>
+		    			<li><a href="javascript:;">类别品牌促销单</a></li>
+		    			<li><a href="javascript:;">条件组合促销单</a></li>
+		    			<li><a href="javascript:;">超量特价单</a></li>
+		    			<li><a href="javascript:;">超额奖励</a></li>
+		    			<li><a href="javascript:;">偶数特价单</a></li>
+		    			<li><a href="javascript:;">赠品促销</a></li>
+		    			<li><a href="javascript:;">买满直减</a></li>
+		    			<li><a href="javascript:;">优惠券促销单</a></li>
+		    		</ul>
+		    	</div>
+		    	<div class="list">
+		    		<ul style="height: 120px;">
+		    			<li><a href="javascript:;">当前促销查询</a></li>
+		    			<li><a href="javascript:;">历史促销查询</a></li>
+		    			<li><a href="javascript:;">促销业绩查询</a></li>
+		    			<li><a href="javascript:;">让利分析</a></li>
+		    			<li><a href="javascript:;">优惠券销售查询</a></li>
+		    		</ul>
+		    	</div>
+		    	<div class="subNav">		    			
+		    		<ul>
+		    			<li onclick="sL(2)" class="subNav-on"><a href="javascript:;"><i class="fa fa-sitemap"></i>业务导航</a></li>
+		    			<li onclick="sL(2)"><a href="javascript:;"><i class="fa fa-gears"></i>促销业务</a></li>
+		    			<li onclick="sL(2)"><a href="javascript:;"><i class="fa fa-gears"></i>促销报表</a></li>
+		    		</ul>
+		    	</div>		    	
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">客户类别管理</a>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl" style="visibility: hidden;">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">流水查询</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存查询</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存退货单</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">客户区域管理</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">客户档案</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批发订单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批发销售单</a>
+                                	<span class="fa fa-long-arrow-up"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                	<span class="fa fa-leftTop"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl" style="visibility: hidden;">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">客户商品关系</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">客户商品关系</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">销售订单状态跟踪</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批发价调价单</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">客户费用单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">应收账款</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">客户结算单</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批发调价生效提醒</a>
+                                </div> 
+                            </div>
+                        </div>                  
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>客户预收款单</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>业务员销售提成</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客户销售查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>商品销售查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批发类单据查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客户费用查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批发毛利报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客户综合查询</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>多批发价体系</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                      	    			    		
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">发卡</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">批量制卡</a>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">卡管理</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">换卡补卡</a>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">会员设置</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">会员档案</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">会员限量特价</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">会员消费查询</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">时段积分</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">积分转储值</a>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">会员积分兑换</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">积分业务查询</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">储值卡查询</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">充值</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">储值卡消费查询</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>会员设置向导</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量写卡</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>会员礼品管理</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量积分转储值</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量修改会员有效期</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量修改会员信息</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>积分清除</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>会员时段积分状态</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>一卡通用户设置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>会员档案审核</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>会员结构分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>一卡通消费查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>会员生日</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>农历会员生日</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>卡管理操作日志系统</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>会员优惠价</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客户消费报价</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>储值消费</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>积分升级</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>完全储值卡方案</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>卡介质说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>  
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl" style="visibility: hidden;">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">电子称</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">组合拆分单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">组拆汇总表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">加工分割商品</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-rightTop"></span>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">日结</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">自动组拆表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl" style="visibility: hidden;">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">电子称</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">部门调货单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">部门调货单汇总</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">电子称</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">永续订单</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存调整单</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">时段特价单</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    	</ol>
+	                    	<ol>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>肉类分割</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>熟食加工</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>面包房</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>水果分级</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>电子称说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">旅行社档案</a>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">讲解员档案</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">接待单号档案</a>
+                                	<span class="fa fa-leftBottom"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">导游档案</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">资料</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">旅行社消费记录</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">旅行社结算</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">提成比例</a>
+                                	<span class="fa fa-rightTop"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">接待</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">消费</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                	<span class="fa fa-long-arrow-up"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">结算</a>
+                                	<span class="fa fa-long-arrow-up"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">旅游超市设置</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">历史接待记录</a>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">导游消费记录</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">导游结算</a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div> 		    	
+		    		<div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>导游费用单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>旅行社费用单</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>导游账务记录</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>旅行社账务记录</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>旅行社导游对应报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>导游费用查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>旅行社费用查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>多导游查询</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>旅游超市说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">微商店2.0管理</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                                <div class="dht-btn">
+                                	<a href="javascript:;">微商店订单报表</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    	</ol>
+	                    	<ol>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>微商店2.0说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>  
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">预盘单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">盘点号申请</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">存货盘点单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">盘点报表</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存异常与告警</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">库存调整单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">库存查询</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">盘点差异处理单</a>
+                                	<span class="fa fa-long-arrow-left"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">组合拆分单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">组合拆分汇总</a>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">库存分布</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">成本调价单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">成本调整价查询</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">转仓单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">转仓查询</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>报价单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>库存设置</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>批次库存查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>仓库类单据查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>库存进销存报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>库存调整汇总表</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>盘点计划</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>点货</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>核对盘点差异</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>盘点机</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>SX3700盘点机</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                                         
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">   
+                   		<div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">代销查询</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">代销账款单</a>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">采购查询</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商档案</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">联营商品销售表</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">联营账款单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">供应商结算单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                	<span class="fa fa-long-arrow-up"></span>
+                                	<span class="fa fa-rightTop"></span>
+                                	<span class="fa fa-rightBottom"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">往来账款</a>
+                                </div>
+                            </div>
+                        </div>                   
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">扣率代销商品销售表</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">扣率代销账款单</a>
+                                	<span class="fa fa-rightTop"></span>
+                                </div>
+                            </div>                                                    
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">费用单</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">扣补单</a>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">租赁合同</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">专柜月结</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">专柜费用单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">专柜付款</a>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>供应商预付款单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>内部费用单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>内部收款单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>客户预收款单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>结算设置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>账务代码</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>批量计算代销账款</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>应收账款</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>内部账款查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>供应商费用查询</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>经营方式</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                       	    			    		
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                   		<div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">分店仓库</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="area fl" style="visibility: hidden;">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">自动配送处理</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">订单状态监控</a>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">门店收货</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">门店补货</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">自动配送处理</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">直配订单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">数据传输</a>
+                                	<span class="fa fa-long-arrow-up"></span>
+                                	<span class="fa fa-long-arrow-down"></span>
+                                </div>
+                            </div>
+                        </div>                                          
+                        <div class="clearfix lc">
+                            <div class="area fl">
+                            	<div class="dht-btn" style="visibility: hidden;">
+                                	<a href="javascript:;">门店补货</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn" style="visibility: hidden;">
+                                	<a href="javascript:;">自动配送处理</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">调出单</a>
+                                	<span class="fa fa-leftTop"></span>
+                                	<span class="fa fa-rightTop"></span>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">调入单</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">连锁业务设置</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">店组信息</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">直调单</a>
+                                	<span class="fa fa-long-arrow-right"></span>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">直调查询</a>
+                                </div>
+                            </div>
+                        </div>                                                                 
+                    </div> 
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>要货单</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>传输断点调整</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>传输日志</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>配送查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>门店补货跟踪</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>配送类单据查询</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>调出单查询报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>要货单汇总交叉报表</span></a></li>	                    		
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>分店业务说明</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>自动配送</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div>                      
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">月结</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">进销存月报表</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">店组库存分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">ABC分析</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">商品销售分析</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商销售分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">店组销售分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">黄金线商品销售分析</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc">
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">时段销售对比分析</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">商品价格带销售分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">商品销售排行</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">供应商销售排行</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc">
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">商品价格分析</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">消费群体分析</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">滞销商品</a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div> 			    	
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>库存周转率</span></a></li>
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>销售环比分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>销售占比分析</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>库存积压报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>经营总况日报表</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>补货分析表</span></a></li>	                    		
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>月结说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div> 
+		    	</div>
+		    </div>
+		    <div class="page">
+		    	<div class="list">
+                   <div class="dht">
+                        <div class="clearfix lc">
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">操作员管理</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">操作员权限管理</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">部门岗位</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">员工档案</a>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="clearfix lc"> 
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">系统设置向导</a>
+                                </div>
+                            </div>                       
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">系统数据管理</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">数据库管理</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">历史数据删除</a>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="clearfix lc"> 
+                        	<div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">短信设置</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">短信群发</a>
+                                </div>
+                            </div>                       
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">短信单发</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">短信查询</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix lc"> 
+                            <div  class="area fl">
+                        		<div class="dht-btn">
+                                	<a href="javascript:;">短信业务说明</a>
+                                </div>
+                            </div>
+                            <div  class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">短信组管理</a>
+                                </div>
+                            </div>
+                            <div class="area fl">
+                            	<div class="dht-btn">
+                                	<a href="javascript:;">短信成员管理</a>
+                                </div>
+                            </div>
+                        </div>                     	                                           
+                    </div> 		    	
+                    <div class="features">
+                    	<div class="features-sort">
+                    		<ul>
+                    			<li class="features-sort-on"><a href="javascript:;">全部</a></li>
+                    			<li><a href="javascript:;">功能</a></li>
+                    			<li><a href="javascript:;">报表</a></li>
+                    			<li><a href="javascript:;">帮助</a></li>
+                    			<li><a href="javascript:;">展开</a></li>
+                    		</ul>
+                    	</div>
+						<div class="features-con">
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>报表单据模板</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>机构登录设置</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>一键优化</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>进程管理</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>模板删除</span></a></li>	
+	                    		<li><a href="javascript:;"><i></i><span>每日提醒</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>系统公告</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>我的邮件</span></a></li>
+	                    		<li><a href="javascript:;"><i></i><span>单据模板导出/导入</span></a></li>	
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>操作日志</span></a></li>                    		
+	                    	</ol>
+	                    	<ol>
+	                    		<li><a href="javascript:;"><i></i><span>单据模板说明</span></a></li>
+	                    	</ol>							
+						</div>
+                    </div> 
+		    	</div>
+		    </div>		    
+		    <div class="statistics" style="display: block;">
+		    	<div class="info">
+		    		<div class="statistics-date">
+		    			<ul class="fl date">
+		    				<li class="date-active"><a href="javascript:;">今日</a></li>
+		    				<li><a href="javascript:;">昨日</a></li>
+		    				<li><a href="javascript:;">本月</a></li>
+		    				<li><a href="javascript:;">上个月</a></li>
+		    			</ul>
+		    			<div class="fr">
+							<div class="item">								
+								<!-- 这里开始 -->								
+								<div class="filter-box">
+									<div class="filter-text">
+										<input class="filter-title" type="text" readonly placeholder="选择门店" />
+										<i class="icon icon-filter-arrow"></i>
+									</div>
+									<select name="filter">
+										<option value="">门店1</option>
+										<option value="">门店2</option>
+										<option value="">门店3</option>
+										<option value="">门店4</option>
+										<option value="">门店5</option>
+									</select>
+								</div>								
+								<!-- 这里结束 -->								
+							</div>		    				
+		    			</div>
+		    		</div>
+		    		<div class="money">
+		    			<div>	
+		    				<span>销售额</span>		    				    				
+		    				<p style="color:#0082df;">37959.11元</p>
+		    			</div>
+		    			<div>		    				
+		    				<span>销售毛利</span>
+		    				<p style="color:#21a900;">-80619.1元</p>		    				
+		    			</div>
+		    			<div>		    				
+		    				<span>客单数</span>
+		    				<p style="color: #ff4400">223笔</p>		    				
+		    			</div>
+		    			<div>   				
+		    				<span>应收欠款</span>
+		    				<p style="color: #ff7b01;">75元</p>		    				
+		    			</div>
+		    			<div>	
+		    				<span>销售额目标达成</span>	
+		    				<p style="color: #0198e6;">0.00%</p>		
+		    				<p class="set">设置月目标值</p>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="table">
+		    		<div class="title"><i class="fa fa-refresh fr" onclick="location.reload();"></i></div>
+		    		<div class="analysis" style="height: 200px;">	
+						<div id="chart" style="height: 200px;"></div>
+						<script type="text/javascript">
+						var data = [[1,2,3,4,5,6,7,8,9,2,3,4,5,6,7,8,9,3,4,5,6,7,8,9],[3,6,8,1,11,22,4,21,6,6,8,1,11,22,4,21,6,8,1,11,22,4,21,6]];
+						var data_max = 100; //Y轴最大刻度
+						var line_title = ["昨日客单数","今日客单数"]; //曲线名称
+						var y_label = ""; //Y轴标题
+						var x_label = ""; //X轴标题
+						var x = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]; //定义X轴刻度值
+						var title = "客单分析"; //统计图标标题
+						j.jqplot.diagram.base("chart", data, line_title, title, x, x_label, y_label, data_max, 1);
+						</script>		    		    			
+		    		</div>
+		    		<div class="report">
+		    			<div class="table-l fl">
+		    				<table>
+		    					<caption>表一：分店损耗报表</caption>
+		    					<tbody>
+		    						<tr>
+		    							<th>分店编号</th>
+		    							<th>分店名称</th>
+		    							<th>入库数量</th>
+		    							<th>报损数量</th>
+		    							<th>报损率</th>
+		    						</tr>
+		    					</tbody>
+		    					<tbody>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    							<td>4</td>
+		    							<td>5</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    							<td>4</td>
+		    							<td>5</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    							<td>4</td>
+		    							<td>5</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    							<td>4</td>
+		    							<td>5</td>
+		    						</tr>
+		    					</tbody>
+		    				</table>
+		    			</div>
+		    			<div class="table-r fr">
+		    				<table>
+		    					<caption>表二：前台异常操作统计</caption>
+		    					<tbody>
+		    						<tr>
+		    							<th>异常项目</th>
+		    							<th>次数</th>
+		    							<th>金额</th>
+		    						</tr>
+		    					</tbody>
+		    					<tbody>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    						</tr>
+		    						<tr>
+		    							<td>1</td>
+		    							<td>2</td>
+		    							<td>3</td>
+		    						</tr>
+
+		    					</tbody>
+		    				</table>		    				
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="fastCon">
+		    	<div class="list">
+		    		<ul style="height: 180px;">
+		    			<li><a href="javascript:;">促销进价单</a></li>
+		    			<li><a href="javascript:;">促销特价单</a></li>
+		    			<li><a href="javascript:;">时段特价单</a></li>
+		    			<li><a href="javascript:;">类别品牌促销单</a></li>
+		    			<li><a href="javascript:;">条件组合促销单</a></li>
+		    			<li><a href="javascript:;">超量特价单</a></li>
+		    			<li><a href="javascript:;">超额奖励</a></li>
+		    			<li><a href="javascript:;">偶数特价单</a></li>
+		    			<li><a href="javascript:;">赠品促销</a></li>
+		    			<li><a href="javascript:;">买满直减</a></li>
+		    			<li><a href="javascript:;">优惠券促销单</a></li>
+		    		</ul>
+		    	</div>	
+		    </div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

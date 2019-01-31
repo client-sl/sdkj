@@ -1,0 +1,35 @@
+#skin{
+	position: absolute;
+	left: 180px;
+	color: #fff;
+}
+#skin p{
+	line-height: 40px;
+	cursor: pointer;
+}
+#skin p span{
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border-radius: 8px;
+	display: inline-block;
+	float: left;
+	background: #fff;
+	margin-right: 6px;
+	margin-top: 12px;
+}
+.color{
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #d0dbe5;
+	box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.1);
+}
+.color span{
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	border-radius: 8px;
+	display: inline-block;
+	background: #fff;
+	cursor: pointer;
+}
