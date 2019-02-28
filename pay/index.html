@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+  <title>一键下单</title>
+  <script type="text/javascript">
+    // rem 适配
+    (function(){
+      var html = document.documentElement;
+      var hWidth = html.getBoundingClientRect().width;
+      html.style.fontSize = hWidth/15+'px';
+      // 1rem = 50px;
+    })();
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="bs/css/bootstrap.css">
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+
+  <script src="bs/js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>  
+
+</head>
+<body>
+  <header id="header">
+    <h1>超市</h1>
+    <i class="glyphicon glyphicon-refresh refresh"></i>
+  </header>
+  <section id="wrapTable"> 
+      <div class="goods">
+        <div class="goods_img">
+          <img src="images/qr.jpg">
+        </div>
+        <div class="goods_top">
+          <div class="goods_price fl">
+            <span class="new">￥<i>533</i></span>
+            <span class="old">￥<i>900</i></span>
+          </div>
+          <div class="fr goods_time"><i class="glyphicon glyphicon-calendar"></i>&nbsp;&nbsp;活动截止时间：<span>2019.02.20</span></div> 
+        </div>             
+        <div class="goods_info">
+          <div class="title">标题标题</div>
+          <div class="goods_info_bottom">
+            <div style="position: relative; background: #fff; width: 100%; z-index: 3; ">
+              <div class="goods_tag">
+                <label for="name">规格：<span>黑色</span></label>
+              </div>
+              <div class="goods_num">
+                <label for="" class="fl">选择数量</label>
+                <div class="change_num fr">
+                  <input type="button" value="-" class="js">
+                  <input type="number" value="0">
+                  <input type="button" value="+" class="zj">
+                </div>
+              </div>               
+            </div>
+             
+          </div>
+        </div> 
+        <img class="bg" src="images/logo.png">                  
+      </div>    
+  </section>
+  <footer id="footer" >
+    <div class="footer1">
+        <div class="fl save"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;温馨提示：为您省了:<i>￥0</i>，请店内提货</div>
+        <div class="fl return">返回</div>
+        <!-- <div class="fl hj">合计:<i class="money">￥0</i></div> -->
+        <div class="fl buy"><i class="money">￥0</i>&nbsp;&nbsp;马上抢</div>
+    </div>  
+  </footer> 
+</body>
+</html>

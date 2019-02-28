@@ -1,0 +1,323 @@
+body{
+  background: #fff;
+}
+a{
+  text-decoration: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+#header {
+  height: 2rem;
+  background:#fff;
+  /*background: #ff0000;*/
+  width: 15rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #eee; 
+  box-sizing: border-box;
+}
+#header h1{
+  width: 15rem;
+  font-size: 0.7rem;
+  line-height: 2rem;
+  color: #000;
+  text-align: center;
+}
+#header h1 img{
+  height: 1rem;
+  /*margin-top: 0.5rem;*/
+  /*float: left;*/
+}
+
+#header .refresh{
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  line-height: 2rem;
+  right: 0.5rem;
+  color: #a4a4a4;
+}
+#footer{
+  width: 15rem;
+  height: 4rem;
+  border-top: 1px solid #f1f0ec;
+  box-sizing: border-box;
+  background: #ffffff;
+/*  bottom: 0;
+  position: absolute;*/
+}
+#footer i{
+  font-style: normal;
+}
+.footer1{
+  width: 15rem;
+  height: 4rem; 
+}
+
+.footer1 .save{
+    width: 15rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+    color: #a4a4a4;
+    border-bottom: 1px solid #f1f0ec;
+}
+.footer1 .save span{
+  color: #ff0000;
+}
+.save i{
+  color: #ff0000;
+}
+.footer1 .buy{
+  width: 9rem;
+  line-height: 2.5rem;
+  text-align: center;
+  background: #ff0000;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.footer1 .return{
+  width: 6rem;
+  line-height: 2.5rem;
+  text-align: center;
+  /*background: #f9f9f9;*/
+  color: #666e7d;
+}
+.footer1 .hj{
+    width: 5rem;
+    font-size: 0.6rem;
+    line-height: 2rem; 
+    text-align: center; 
+}
+.footer1 .hj .money{
+  color: #ff0000;
+}
+.footer2{
+  width: 15rem;
+  height: 2rem;
+  border-top: 1px solid #f1f0ec;
+}
+.footer2 a{
+  display: inline-block;
+  float: left;
+  width: 7.5rem;
+  height: 2rem;
+  border-right: 1px solid #f1f0ec;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.6rem;
+  color: #484848;
+  line-height: 2rem;  
+}
+.footer2 a span{
+  margin-right: 0.2rem;
+/*  line-height: 2rem;*/
+}
+
+
+#footer a.active {
+  color: #ff0000;
+}
+
+
+#wrap {
+  position: absolute;
+  width: 15rem;
+  height: auto;
+  background: #fff;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+}
+#wrapTable{
+  margin-top: 2rem;
+  position: relative;
+  /*position: absolute;*/
+  width: 15rem;
+  height: calc(100% - 6rem);
+  /*top: 2rem;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 4rem;*/
+  overflow: auto;
+}
+
+.goods{
+  /*background: #f5f5f5;*/
+  height: calc(100%);
+  overflow-y: scroll;
+}
+.goods_top{
+  width: 15rem;
+  height: 1.5rem;
+  background: rgba(255,0,0,0.9);
+  line-height: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.goods_time{
+  color: #fff;
+  margin-right: 0.5rem;
+  font-size: 0.5rem;
+}
+
+.list .goods_bottom{
+  position: relative;
+}
+.goods .check{
+  width: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #a4a4a4;
+  font-weight: normal;
+}
+.goods .goods_img{
+  width: 15rem;
+  height: 9rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.goods .goods_img img{
+  width: 15rem;
+  height: 9rem;
+}
+.goods .goods_info{
+  width: 15rem;
+  height: auto;
+  /*overflow-y: scroll;*/
+  height: calc(100% - 10.5rem);
+  /*height: 5rem;*/
+  /*background: #f5f5f5;*/
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.goods .goods_info .title{
+    font-size: 0.65rem;
+    width: 15rem;
+    margin-top: 0;
+    background: #fff;
+    text-indent: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.5rem;
+    color: #000;
+}
+.goods .goods_info p{
+  font-size: 0.5rem;
+  color: #808080;
+  line-height: 0.8rem;
+  background: #fff;
+  text-indent: 0.5rem;
+  padding-top: 0.5rem;
+}
+.goods_info_bottom{
+  width: 15rem;
+  height: 8rem;
+  /*height: calc(100% - 2rem);*/
+  border-top: 0.5rem solid #eee;
+  /*margin-bottom: 2rem;*/
+  background: #fff;
+}
+.goods_price{
+  line-height: 1.5rem;
+  color: #fff;
+  font-size: 0.5rem;
+  margin-left: 0.5rem;
+}
+.old{
+  font-size: 0.5rem;
+  margin-left: 0.3rem;
+  text-decoration: line-through;
+}
+.new i,.old i{
+  font-style: normal;
+}
+.new{
+  display: inline-block;
+  line-height: 1.5rem;
+}
+.new i{
+  font-size: 0.9rem;
+  display: inline-block;
+  line-height: 1.5rem;
+}
+.goods_tag{
+  width: 14rem;
+  margin: 0.5rem auto 0;
+}
+.goods_tag p input{
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background: #f6f6f6;
+  text-indent: 0;
+  margin-right: 0.5rem;
+}
+.goods_tag span{
+  display: inline-block;
+  padding: 0.1rem 0.2rem;
+  background: #ff6000;
+  color: #fff;
+  text-indent: 0;
+  margin-right: 0.5rem;
+}
+.goods_num{
+  width: 14rem;
+  height: 2rem;
+  background: #fff;
+  margin: 0.5rem auto 5rem;
+  position: relative;
+  z-index: 2;
+}
+.change_num{
+  width: 6rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+.change_num input{
+  border: none;
+  outline: none;
+  height: 1rem;
+  background: #fafafa;
+  float: left;
+  text-align: center;
+  color: #9f9f9f;
+  font-size: 0.5rem;
+  box-sizing: border-box;
+  width: 33%;
+}
+.change_num input.js{
+  border-right: 0.02rem solid #ff0000;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bolder;
+}
+.change_num input.zj{
+  border-left: 0.02rem solid #ff0000;
+  background: #ff0000;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.bg{
+  width: 7rem;
+  position: absolute;
+  bottom: 0.4rem;
+  left:4rem;
+  opacity: 0.5;
+}
+
+
